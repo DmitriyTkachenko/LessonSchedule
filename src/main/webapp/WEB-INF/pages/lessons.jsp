@@ -97,13 +97,13 @@
                     <form:options items="${courses}" itemValue="id" itemLabel="name"/>
                 </form:select>
 
-                <%--<form:select multiple="true" path="instructors" class="selectInstructors selectpicker" data-live-search="true">--%>
-                    <%--<form:options items="${instructors}" itemValue="id"/>--%>
-                <%--</form:select>--%>
+                <form:select multiple="true" path="instructors" class="selectInstructors selectpicker" data-live-search="true">
+                    <form:options items="${instructors}" itemValue="id"/>
+                </form:select>
 
-                <%--<form:select multiple="true" path="auditoriums" class="selectAuditoriums selectpicker" data-live-search="true">--%>
-                    <%--<form:options items="${auditoriums}" itemValue="id"/>--%>
-                <%--</form:select>--%>
+                <form:select multiple="true" path="auditoriums" class="selectAuditoriums selectpicker" data-live-search="true">
+                    <form:options items="${auditoriums}" itemValue="id"/>
+                </form:select>
                 <input type="submit" name="addLesson" value="Добавить занятие" class="btn btn-default">
             </form:form>
 
@@ -165,7 +165,7 @@
 
         <script type="text/javascript">
             $('.selectGroups').selectpicker({
-                noneSelectedText: 'Выберите группу'
+                noneSelectedText: 'Выберите группы'
             });
             $('.selectInstructors').selectpicker({
                 noneSelectedText: 'Выберите преподавателей'
@@ -175,7 +175,7 @@
             });
             $('.selectCourse').selectpicker({
                 noneSelectedText: 'Выберите предмет'
-            })
+            });
             $('.selectpicker').selectpicker({
                 noneResultsText: "Ничего не найдено по запросу"
             });

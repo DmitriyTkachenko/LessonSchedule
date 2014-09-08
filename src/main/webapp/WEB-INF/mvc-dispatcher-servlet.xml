@@ -31,6 +31,8 @@
             <set>
                 <ref bean="courseFormatter"/>
                 <ref bean="groupFormatter"/>
+                <ref bean="instructorFormatter"/>
+                <ref bean="auditoriumFormatter"/>
             </set>
         </property>
     </bean>
