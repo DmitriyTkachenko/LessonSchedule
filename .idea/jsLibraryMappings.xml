@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/lessons.jsp" libraries="{jquery-1.11.1, jquery-2.1.1}" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/resources/silviomoreto-bootstrap-select-d3e3c1d/test.html" libraries="{bootstrap, jquery}" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/lessons.jsp" libraries="{jquery-2.1.1}" />
   </component>
 </project>
 

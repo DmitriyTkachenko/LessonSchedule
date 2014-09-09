@@ -12,13 +12,14 @@
         <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="<c:url value="/resources/silviomoreto-bootstrap-select-d3e3c1d/dist/css/bootstrap-select.min.css"/>">
-        <link rel="stylesheet" href="<c:url value="/resources/css/bootstrap.min.css" />">
-        <link rel="stylesheet" href="<c:url value="/resources/css/styles.css" />">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/bootstrap-select/bootstrap-select.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/styles.css">
 
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/silviomoreto-bootstrap-select-d3e3c1d/dist/js/bootstrap-select.min.js"></script>
-        <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/bootstrap-select/bootstrap-select.min.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
     </head>
 
     <body>
