@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd83edf2-ef86-428b-80ec-f2a231287ef3" name="Default" comment="Refactoring. Added two properties to Lesson with corresponding select forms to view.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/table.html" />
+    <list default="true" id="bd83edf2-ef86-428b-80ec-f2a231287ef3" name="Default" comment="Refactoring.">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/LessonController.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/LessonController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/lessons.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/lessons.jsp" />
     </list>
     <ignored path="LessonSchedule.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +28,7 @@
       <file leaf-file-name="lessons.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/lessons.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.847191" vertical-offset="1533" max-vertical-offset="3165">
+            <state vertical-scroll-proportion="2.555056" vertical-offset="1218" max-vertical-offset="3165">
               <caret line="157" column="38" selection-start-line="157" selection-start-column="38" selection-end-line="157" selection-end-column="38" />
               <folding />
             </state>
@@ -769,7 +766,7 @@
       <created>1410248207817</created>
       <updated>1410248207817</updated>
       <workItem from="1410248208323" duration="3163000" />
-      <workItem from="1410423297242" duration="2996000" />
+      <workItem from="1410423297242" duration="3033000" />
     </task>
     <task id="LOCAL-00001" summary="Deleted unneeded third-party code. JSP imports changed. persistence.xml adjusted.">
       <created>1410251965800</created>
@@ -783,18 +780,22 @@
       <created>1410424792959</created>
       <updated>1410424792959</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Refactoring.">
+      <created>1410431860967</created>
+      <updated>1410431860967</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6159000" />
+    <option name="totallyTimeSpent" value="6196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="22" width="1388" height="878" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21248142" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -843,7 +844,8 @@
     </option>
     <MESSAGE value="Deleted unneeded third-party code. JSP imports changed. persistence.xml adjusted." />
     <MESSAGE value="Refactoring. Added two properties to Lesson with corresponding select forms to view." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring. Added two properties to Lesson with corresponding select forms to view." />
+    <MESSAGE value="Refactoring." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -943,7 +945,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/lessons.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.847191" vertical-offset="1533" max-vertical-offset="3165">
+        <state vertical-scroll-proportion="2.555056" vertical-offset="1218" max-vertical-offset="3165">
           <caret line="157" column="38" selection-start-line="157" selection-start-column="38" selection-end-line="157" selection-end-column="38" />
           <folding />
         </state>
