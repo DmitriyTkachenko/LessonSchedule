@@ -149,35 +149,39 @@
                 <%--<spring:bind path=""--%>
             <%--</form:form>--%>
 
+            <%--<c:if test="${!empty lessons}">--%>
 
-            <%--
-            <c:if test="${!empty users}">
-                <h3>Users</h3>
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <c:forEach items="${users}" var="user">
-                            <tr>
-                                <td>${user.lastName}, ${user.firstName}</td>
-                                <td>${user.email}</td>
-                                <td>
-                                    <form:form action="delete/${user.id}" method="post"><input type="submit"
-                                                                                               class="btn btn-danger btn-mini"
-                                                                                               value="Delete"/>
-                                    </form:form>
-                                </td>
-                            </tr>
-                        </c:forEach>
-                    </tbody>
-                </table>
-            </c:if>
-            --%>
+            <%--</c:if>--%>
+
+
+            <%--<c:if test="${!empty users}">--%>
+                <%--<h3>Users</h3>--%>
+                <%--<table class="table table-bordered table-striped">--%>
+                    <%--<thead>--%>
+                        <%--<tr>--%>
+                            <%--<th>Name</th>--%>
+                            <%--<th>Email</th>--%>
+                            <%--<th>&nbsp;</th>--%>
+                        <%--</tr>--%>
+                    <%--</thead>--%>
+                    <%--<tbody>--%>
+                        <%--<c:forEach items="${users}" var="user">--%>
+                            <%--<tr>--%>
+                                <%--<td>${user.lastName}, ${user.firstName}</td>--%>
+                                <%--<td>${user.email}</td>--%>
+                                <%--<td>--%>
+                                    <%--<form:form action="delete/${user.id}" method="post">--%>
+                                        <%--<input type="submit"--%>
+                                                    <%--class="btn btn-danger btn-mini"--%>
+                                                                                               <%--value="Delete"/>--%>
+                                    <%--</form:form>--%>
+                                <%--</td>--%>
+                            <%--</tr>--%>
+                        <%--</c:forEach>--%>
+                    <%--</tbody>--%>
+                <%--</table>--%>
+            <%--</c:if>--%>
+
 
         </div>
 

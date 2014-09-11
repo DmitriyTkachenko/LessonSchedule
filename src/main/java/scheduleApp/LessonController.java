@@ -37,6 +37,7 @@ public class LessonController {
         model.addAttribute("auditoriums", auditoriumRepository.findAll());
         model.addAttribute("groups", groupRepository.findAll());
         model.addAttribute("instructors", instructorRepository.findAll());
+        model.addAttribute("lessons", lessonRepository.findAll());
 
         return "lessons";
     }
