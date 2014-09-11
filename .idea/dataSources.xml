@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1936983795">
-    <data-source source="LOCAL" name="defaultPersistenceUnit" uuid="7a8b5e22-ac3f-429b-be40-792ad2750d08">
+  <component name="DataSourceManagerImpl" format="xml" hash="3967803729">
+    <data-source source="LOCAL" name="defaultPersistenceUnit" uuid="8ef44967-64ae-478d-8f48-fc73a496cbc3">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/scheduledb</jdbc-url>
       <user-name>root</user-name>
-      <user-password>dffadfdadff0dfe1dff8dfe8dfe6dfe2dfc1df9ddfc2dfdcdf9edfdcdfefdffedf98dfecdffbdfe0</user-password>
+      <user-password>dfd8dfc5dfc5dfde</user-password>
       <libraries>
         <library>
           <url>file://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.32/mysql-connector-java-5.1.32.jar</url>
