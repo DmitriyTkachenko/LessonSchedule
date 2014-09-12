@@ -106,22 +106,30 @@
                     <form:options items="${auditoriums}" itemValue="id"/>
                 </form:select>
 
+                <%--<form:select path="dayOfWeek" class="selectpicker" data-live-search="true">--%>
+                    <%--<form:option value="1" label="Понеділок"/>--%>
+                    <%--<form:option value="2" label="Вівторок"/>--%>
+                    <%--<form:option value="3" label="Середа"/>--%>
+                    <%--<form:option value="4" label="Четвер"/>--%>
+                    <%--<form:option value="5" label="П'ятниця"/>--%>
+                    <%--<form:option value="6" label="Субота"/>--%>
+                <%--</form:select>--%>
+
                 <form:select path="dayOfWeek" class="selectpicker" data-live-search="true">
-                    <form:option value="1" label="Понеділок"/>
-                    <form:option value="2" label="Вівторок"/>
-                    <form:option value="3" label="Середа"/>
-                    <form:option value="4" label="Четвер"/>
-                    <form:option value="5" label="П'ятниця"/>
-                    <form:option value="6" label="Субота"/>
+                    <form:options items="${dayOfWeek}" itemLabel="displayName"/>
                 </form:select>
 
                 <form:select path="number" class="selectpicker" data-live-search="true">
-                    <form:option value="1" label="1 (08:30 - 10:05)"/>
-                    <form:option value="2" label="2 (10:25 - 12:00)"/>
-                    <form:option value="3" label="3 (12:20 - 13:55)"/>
-                    <form:option value="4" label="4 (14:15 - 15:50)"/>
-                    <form:option value="5" label="5 (16:10 - 17:45)"/>
+                    <form:options items="${number}" itemLabel="displayName"/>
                 </form:select>
+
+                <%--<form:select path="number" class="selectpicker" data-live-search="true">--%>
+                    <%--<form:option value="1" label="1 (08:30 - 10:05)"/>--%>
+                    <%--<form:option value="2" label="2 (10:25 - 12:00)"/>--%>
+                    <%--<form:option value="3" label="3 (12:20 - 13:55)"/>--%>
+                    <%--<form:option value="4" label="4 (14:15 - 15:50)"/>--%>
+                    <%--<form:option value="5" label="5 (16:10 - 17:45)"/>--%>
+                <%--</form:select>--%>
                 <input type="submit" name="addLesson" value="Добавить занятие" class="btn btn-default">
             </form:form>
 

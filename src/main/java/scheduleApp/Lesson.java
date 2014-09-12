@@ -7,7 +7,7 @@ import java.util.List;
 public class Lesson {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
 
     @OneToMany
     private List<Group> groups;
@@ -21,15 +21,54 @@ public class Lesson {
     @OneToOne
     private Course course;
 
-    private Byte dayOfWeek;
+    private enum DayOfWeek {
+        MONDAY("Понеділок"),
+        TUESDAY("Вівторок"),
+        WEDNESDAY("Середа"),
+        THURSDAY("Четвер"),
+        FRIDAY("П'ятниця"),
+        SATURDAY("Субота");
 
-    private Byte number;
+        private final String displayName;
 
-    public Long getId() {
+        private DayOfWeek(String s) {
+            displayName = s;
+        }
+
+        public String getDisplayName() {
+            return displayName;
+        }
+    }
+
+    private enum Number {
+        N1("1 (8:30 - 10:05)"),
+        N2("2 (10:25 - 12:00)"),
+        N3("3 (12:20 - 13:55)"),
+        N4("4 (14:15 - 15:50)"),
+        N5("5 (16:10 - 17:45)");
+
+        private final String displayName;
+
+        private Number(String s) {
+            displayName = s;
+        }
+
+        public String getDisplayName() {
+            return displayName;
+        }
+    }
+
+    @Column(columnDefinition = "tinyint")
+    private DayOfWeek dayOfWeek;
+
+    @Column(columnDefinition = "tinyint")
+    private Number number;
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -65,19 +104,19 @@ public class Lesson {
         this.course = course;
     }
 
-    public Byte getDayOfWeek() {
+    public DayOfWeek getDayOfWeek() {
         return dayOfWeek;
     }
 
-    public void setDayOfWeek(Byte dayOfWeek) {
+    public void setDayOfWeek(DayOfWeek dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
     }
 
-    public Byte getNumber() {
+    public Number getNumber() {
         return number;
     }
 
-    public void setNumber(Byte number) {
+    public void setNumber(Number number) {
         this.number = number;
     }
 }

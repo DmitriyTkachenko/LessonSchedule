@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Group {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
 
     @Basic
     private String name;
@@ -15,11 +15,11 @@ public class Group {
     @Basic
     private Integer numberOfStudents;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

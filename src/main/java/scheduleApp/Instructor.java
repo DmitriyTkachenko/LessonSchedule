@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Instructor {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
 
     @Basic
     private String name;
@@ -14,11 +14,11 @@ public class Instructor {
     @Basic
     private String title;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
