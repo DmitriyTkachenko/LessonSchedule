@@ -9,20 +9,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 @Controller
 public class LessonController {
-//    @Autowired
-//    private ConversionService conversionService;
-////Autowiring the ConversionService we declared in the context file above.
-//
-//    @InitBinder
-//    public void registerConversionServices(WebDataBinder dataBinder) {
-//        dataBinder.setConversionService(conversionService);
-//    }
 
     @Autowired
     private LessonRepository lessonRepository;
+
+    @Autowired
+    private AuditoriumRepository auditoriumRepository;
+
+    @Autowired
+    private CourseRepository courseRepository;
+
+    @Autowired
+    private GroupRepository groupRepository;
+
+    @Autowired
+    private InstructorRepository instructorRepository;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String showLessons(ModelMap model) {
@@ -37,59 +44,30 @@ public class LessonController {
         model.addAttribute("auditoriums", auditoriumRepository.findAll());
         model.addAttribute("groups", groupRepository.findAll());
         model.addAttribute("instructors", instructorRepository.findAll());
-        model.addAttribute("lessons", lessonRepository.findAll());
+        model.addAttribute("daysOfWeek", DayOfWeek.values());
+        model.addAttribute("numbers", Number.values());
+
+        List<Lesson> lessonList = lessonRepository.findAll();
+
+        Collections.sort(lessonList, new Comparator<Lesson>() {
+            @Override
+            public int compare(Lesson l1, Lesson l2) {
+                int numberCmp = l1.getNumber().getValue() - l2.getNumber().getValue();
+                if (numberCmp != 0) {
+                    return numberCmp;
+                }
+                int dayOfWeekCmp = l1.getDayOfWeek().getValue() - l2.getDayOfWeek().getValue();
+                return dayOfWeekCmp;
+            }
+        });
+
+        model.addAttribute("lessons", lessonList);
 
         return "lessons";
     }
 
-    @Autowired
-    private AuditoriumRepository auditoriumRepository;
-
-    @Autowired
-    private CourseRepository courseRepository;
-
-    @Autowired
-    private GroupRepository groupRepository;
-
-    @Autowired
-    private InstructorRepository instructorRepository;
-
-//    @RequestMapping(value = "/", method = RequestMethod.GET)
-//    public String listUsers(ModelMap model) {
-//        model.addAttribute("user", new Lesson());
-//        model.addAttribute("users", lessonRepository.findAll());
-//        return "users";
-//    }
-
-//    @RequestMapping(value = "/api/users", method = RequestMethod.GET)
-//    public
-//    @ResponseBody
-//    String listUsersJson(ModelMap model) throws JSONException {
-//        JSONArray userArray = new JSONArray();
-//        for (Lesson user : lessonRepository.findAll()) {
-//            JSONObject userJSON = new JSONObject();
-//            userJSON.put("id", user.getId());
-//            userJSON.put("firstName", user.getFirstName());
-//            userJSON.put("lastName", user.getLastName());
-//            userJSON.put("email", user.getEmail());
-//            userArray.put(userJSON);
-//        }
-//        return userArray.toString();
-//    }
-
-//    @RequestMapping(value = "/add", method = RequestMethod.POST)
-//    public String addUser(@ModelAttribute("user") User user, BindingResult result) {
-//        userRepository.save(user);
-//        return "redirect:/";
-//    }
-
-//    @RequestMapping(value = "/chooseAuditorium", method = RequestMethod.POST)
-//    public String chooseAuditorium(@ModelAttribute("auditorium") Auditorium auditorium) {
-//        return "redirect:/";
-//    }
-//
     @RequestMapping(value = "/addLesson", method = RequestMethod.POST)
-    public String addLesson(@ModelAttribute("lesson") @Valid Lesson lesson, BindingResult result) {
+    public String addLesson(@Valid @ModelAttribute("lesson") Lesson lesson, BindingResult result) {
         lessonRepository.save(lesson);
         return "redirect:/";
     }
@@ -121,6 +99,28 @@ public class LessonController {
 //    @RequestMapping("/delete/{userId}")
 //    public String deleteUser(@PathVariable("userId") Long userId) {
 //        lessonRepository.delete(lessonRepository.findOne(userId));
+//        return "redirect:/";
+//    }
+
+    //    @RequestMapping(value = "/api/users", method = RequestMethod.GET)
+//    public
+//    @ResponseBody
+//    String listUsersJson(ModelMap model) throws JSONException {
+//        JSONArray userArray = new JSONArray();
+//        for (Lesson user : lessonRepository.findAll()) {
+//            JSONObject userJSON = new JSONObject();
+//            userJSON.put("id", user.getId());
+//            userJSON.put("firstName", user.getFirstName());
+//            userJSON.put("lastName", user.getLastName());
+//            userJSON.put("email", user.getEmail());
+//            userArray.put(userJSON);
+//        }
+//        return userArray.toString();
+//    }
+
+//    @RequestMapping(value = "/add", method = RequestMethod.POST)
+//    public String addUser(@ModelAttribute("user") User user, BindingResult result) {
+//        userRepository.save(user);
 //        return "redirect:/";
 //    }
 

@@ -9,7 +9,7 @@ import scheduleApp.Group;
 import java.text.ParseException;
 import java.util.Locale;
 
-@Component
+@Component("groupFormatter")
 public class GroupFormatter implements Formatter<Group> {
     @Autowired
     private GroupRepository groupRepository;
@@ -21,6 +21,6 @@ public class GroupFormatter implements Formatter<Group> {
 
     @Override
     public Group parse(String id, Locale arg1) throws ParseException {
-        return groupRepository.findOne(Long.parseLong(id));
+        return groupRepository.findOne(Integer.parseInt(id));
     }
 }

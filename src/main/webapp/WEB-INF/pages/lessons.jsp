@@ -3,6 +3,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <html>
     <head>
@@ -25,25 +26,6 @@
     <body>
 
         <div class="container">
-
-            <%--
-            <h1>Users</h1>
-            <form:form method="post" action="add" commandName="user" role="form">
-                <div class="form-group">
-                    <form:label path="firstName">First Name:</form:label>
-                    <form:input path="firstName" class="form-control" placeholder="First Name"/>
-                </div>
-                <div class="form-group">
-                    <form:label path="lastName">Last Name:</form:label>
-                    <form:input path="lastName" class="form-control" placeholder="Last Name"/>
-                </div>
-                <div class="form-group">
-                    <form:label path="email">Email:</form:label>
-                    <form:input path="email" class="form-control" placeholder="Email"/>
-                </div>
-                <button type="submit" class="btn btn-default">Add User</button>
-            </form:form>
-            --%>
 
             <!-- Auditorium adding form -->
             <form:form method="post" action="addAuditorium" modelAttribute="auditorium" role="form" class="form-inline">
@@ -106,15 +88,6 @@
                     <form:options items="${auditoriums}" itemValue="id"/>
                 </form:select>
 
-                <%--<form:select path="dayOfWeek" class="selectpicker" data-live-search="true">--%>
-                    <%--<form:option value="1" label="Понеділок"/>--%>
-                    <%--<form:option value="2" label="Вівторок"/>--%>
-                    <%--<form:option value="3" label="Середа"/>--%>
-                    <%--<form:option value="4" label="Четвер"/>--%>
-                    <%--<form:option value="5" label="П'ятниця"/>--%>
-                    <%--<form:option value="6" label="Субота"/>--%>
-                <%--</form:select>--%>
-
                 <form:select path="dayOfWeek" class="selectpicker" data-live-search="true">
                     <form:options items="${dayOfWeek}" itemLabel="displayName"/>
                 </form:select>
@@ -123,16 +96,8 @@
                     <form:options items="${number}" itemLabel="displayName"/>
                 </form:select>
 
-                <%--<form:select path="number" class="selectpicker" data-live-search="true">--%>
-                    <%--<form:option value="1" label="1 (08:30 - 10:05)"/>--%>
-                    <%--<form:option value="2" label="2 (10:25 - 12:00)"/>--%>
-                    <%--<form:option value="3" label="3 (12:20 - 13:55)"/>--%>
-                    <%--<form:option value="4" label="4 (14:15 - 15:50)"/>--%>
-                    <%--<form:option value="5" label="5 (16:10 - 17:45)"/>--%>
-                <%--</form:select>--%>
                 <input type="submit" name="addLesson" value="Добавить занятие" class="btn btn-default">
             </form:form>
-
 
             <%--
             <form:form method="POST" action="chooseAuditorium" modelAttribute="auditoriumSelect">
@@ -142,7 +107,6 @@
                 <input type="submit" name="submit" value="Submit"></td>
             </form:form>
             --%>
-
 
             <%--<form:form method="post" action="addLesson" modelAttribute="lesson" role="form" class="form-inline">--%>
                 <%--<spring:bind path="course.name">--%>
@@ -157,10 +121,40 @@
                 <%--<spring:bind path=""--%>
             <%--</form:form>--%>
 
-            <%--<c:if test="${!empty lessons}">--%>
-
-            <%--</c:if>--%>
-
+            <c:if test="${!empty lessons}">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <c:forEach items="${daysOfWeek}" var="dayOfWeek">
+                                <th>${dayOfWeek.displayName}</th>
+                            </c:forEach>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:set var="count" value="0" scope="page"/>
+                        <c:forEach var="i" begin="1" end="5">
+                            <c:forEach var="j" begin="1" end="6">
+                                <c:if test="${j == 1}">
+                                    <tr>
+                                    <th>${numbers[i - 1].displayName}</th>
+                                </c:if>
+                                    <td>
+                                        <c:if test="${lessons[count].number.value == i && lessons[count].dayOfWeek.value == j}">
+                                            ${lessons[count]}
+                                            <c:if test="${fn:length(lessons) > count}">
+                                                <c:set var="count" value="${count + 1}" scope="page"/>
+                                            </c:if>
+                                        </c:if>
+                                    </td>
+                                <c:if test="${j == 6}">
+                                    </tr>
+                                </c:if>
+                            </c:forEach>
+                        </c:forEach>
+                    </tbody>
+                </table>
+            </c:if>
 
             <%--<c:if test="${!empty users}">--%>
                 <%--<h3>Users</h3>--%>

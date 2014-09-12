@@ -9,7 +9,7 @@ import scheduleApp.AuditoriumRepository;
 import java.text.ParseException;
 import java.util.Locale;
 
-@Component
+@Component("auditoriumFormatter")
 public class AuditoriumFormatter implements Formatter<Auditorium> {
     @Autowired
     private AuditoriumRepository auditoriumRepository;
@@ -21,6 +21,6 @@ public class AuditoriumFormatter implements Formatter<Auditorium> {
 
     @Override
     public Auditorium parse(String id, Locale arg1) throws ParseException {
-        return auditoriumRepository.findOne(Long.parseLong(id));
+        return auditoriumRepository.findOne(Integer.parseInt(id));
     }
 }

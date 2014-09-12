@@ -9,7 +9,7 @@ import scheduleApp.Course;
 import java.text.ParseException;
 import java.util.Locale;
 
-@Component
+@Component("courseFormatter")
 public class CourseFormatter implements Formatter<Course> {
     @Autowired
     private CourseRepository courseRepository;
@@ -21,6 +21,6 @@ public class CourseFormatter implements Formatter<Course> {
 
     @Override
     public Course parse(String id, Locale arg1) throws ParseException {
-        return courseRepository.findOne(Long.parseLong(id));
+        return courseRepository.findOne(Integer.parseInt(id));
     }
 }

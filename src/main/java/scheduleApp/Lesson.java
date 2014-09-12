@@ -1,6 +1,7 @@
 package scheduleApp;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import java.util.List;
 
 @Entity
@@ -9,54 +10,17 @@ public class Lesson {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @OneToMany
-    private List<Group> groups;
+    @OneToMany(fetch = FetchType.EAGER)
+    private @Valid List<Group> groups;
 
-    @OneToMany
-    private List<Instructor> instructors;
+    @OneToMany(fetch = FetchType.EAGER)
+    private @Valid List<Instructor> instructors;
 
-    @OneToMany
-    private List<Auditorium> auditoriums;
+    @OneToMany(fetch = FetchType.EAGER)
+    private @Valid List<Auditorium> auditoriums;
 
-    @OneToOne
-    private Course course;
-
-    private enum DayOfWeek {
-        MONDAY("Понеділок"),
-        TUESDAY("Вівторок"),
-        WEDNESDAY("Середа"),
-        THURSDAY("Четвер"),
-        FRIDAY("П'ятниця"),
-        SATURDAY("Субота");
-
-        private final String displayName;
-
-        private DayOfWeek(String s) {
-            displayName = s;
-        }
-
-        public String getDisplayName() {
-            return displayName;
-        }
-    }
-
-    private enum Number {
-        N1("1 (8:30 - 10:05)"),
-        N2("2 (10:25 - 12:00)"),
-        N3("3 (12:20 - 13:55)"),
-        N4("4 (14:15 - 15:50)"),
-        N5("5 (16:10 - 17:45)");
-
-        private final String displayName;
-
-        private Number(String s) {
-            displayName = s;
-        }
-
-        public String getDisplayName() {
-            return displayName;
-        }
-    }
+    @OneToOne(fetch = FetchType.EAGER)
+    private @Valid Course course;
 
     @Column(columnDefinition = "tinyint")
     private DayOfWeek dayOfWeek;
@@ -118,5 +82,18 @@ public class Lesson {
 
     public void setNumber(Number number) {
         this.number = number;
+    }
+
+    @Override
+    public String toString() {
+        return "Lesson{" +
+                "id=" + id +
+                ", groups=" + groups +
+                ", instructors=" + instructors +
+                ", auditoriums=" + auditoriums +
+                ", course=" + course +
+                ", dayOfWeek=" + dayOfWeek +
+                ", number=" + number +
+                '}';
     }
 }
