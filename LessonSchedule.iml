@@ -24,7 +24,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="NewPersistenceUnit" />
-          <factory-entry name="defaultPersistenceUnit" value="7704fd6f-79e8-41f4-b5bf-13578d44d336" />
+          <factory-entry name="defaultPersistenceUnit" value="5a7e9e89-d0da-48fb-9a10-13ec22d3fe3b" />
           <factory-entry name="entityManagerFactory" />
           <factory-entry name="persistenceUnit" value="2927f9de-a16d-4705-b2c0-99c0b4ebb111" />
         </datasource-mapping>
@@ -65,7 +65,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.1.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.0.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:3.0.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet.jsp:jsp-api:2.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.1.0.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:4.1.0.RELEASE" level="project" />

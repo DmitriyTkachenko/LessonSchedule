@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="defaultPersistenceUnit" uuid="8ef44967-64ae-478d-8f48-fc73a496cbc3">
+  <data-source source="LOCAL" name="defaultPersistenceUnit" uuid="5a7e9e89-d0da-48fb-9a10-13ec22d3fe3b">
     <database-info product="MySQL" version="5.6.20" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.32 ( Revision: jess.balint@oracle.com-20140716155848-mlwabor66widht1n )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
@@ -2015,7 +2015,7 @@
       <column name="groups_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <foreign-key name="FK_5tvpy8fa4e8b69ktrv19l5a55" columns="groups_id" ref-table="AcademicGroup" ref-schema="" ref-catalog="scheduledb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="FK_kuponsdof65ykn8uwwvpkex9x" columns="Lesson_id" ref-table="Lesson" ref-schema="" ref-catalog="scheduledb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="UK_5tvpy8fa4e8b69ktrv19l5a55" unique="true" columns="groups_id"/>
+      <index name="FK_5tvpy8fa4e8b69ktrv19l5a55" unique="false" columns="groups_id"/>
       <index name="FK_kuponsdof65ykn8uwwvpkex9x" unique="false" columns="Lesson_id"/>
     </table>
     <table name="Lesson_Auditorium" schema="" catalog="scheduledb" type="TABLE">
@@ -2023,15 +2023,15 @@
       <column name="auditoriums_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <foreign-key name="FK_4sb0i83iov9i3p0krcucbu3c0" columns="Lesson_id" ref-table="Lesson" ref-schema="" ref-catalog="scheduledb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="FK_664akm5kerbsoc1o08aw5qbhm" columns="auditoriums_id" ref-table="Auditorium" ref-schema="" ref-catalog="scheduledb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="UK_664akm5kerbsoc1o08aw5qbhm" unique="true" columns="auditoriums_id"/>
       <index name="FK_4sb0i83iov9i3p0krcucbu3c0" unique="false" columns="Lesson_id"/>
+      <index name="FK_664akm5kerbsoc1o08aw5qbhm" unique="false" columns="auditoriums_id"/>
     </table>
     <table name="Lesson_Instructor" schema="" catalog="scheduledb" type="TABLE">
       <column name="Lesson_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="instructors_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <foreign-key name="FK_a12sowoco6jlvterq9nuyiu1p" columns="instructors_id" ref-table="Instructor" ref-schema="" ref-catalog="scheduledb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="FK_p0aojgft67ecn4ybck37p5rto" columns="Lesson_id" ref-table="Lesson" ref-schema="" ref-catalog="scheduledb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="UK_a12sowoco6jlvterq9nuyiu1p" unique="true" columns="instructors_id"/>
+      <index name="FK_a12sowoco6jlvterq9nuyiu1p" unique="false" columns="instructors_id"/>
       <index name="FK_p0aojgft67ecn4ybck37p5rto" unique="false" columns="Lesson_id"/>
     </table>
   </data-source>
