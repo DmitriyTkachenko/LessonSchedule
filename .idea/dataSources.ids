@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="defaultPersistenceUnit" uuid="5a7e9e89-d0da-48fb-9a10-13ec22d3fe3b">
+  <data-source name="defaultPersistenceUnit" uuid="5a7e9e89-d0da-48fb-9a10-13ec22d3fe3b">
     <database-info product="MySQL" version="5.6.20" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.32 ( Revision: jess.balint@oracle.com-20140716155848-mlwabor66widht1n )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
-    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
     <schema name="" catalog="information_schema"/>
     <schema name="" catalog="mysql"/>
     <schema name="" catalog="performance_schema"/>
@@ -1970,69 +1970,6 @@
       <column name="USER" sqlType="CHAR" precision="16" scale="0" nullable="true" jdbcType="1"/>
       <column name="CURRENT_CONNECTIONS" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="TOTAL_CONNECTIONS" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-    </table>
-    <table name="AcademicGroup" schema="" catalog="scheduledb" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="numberOfStudents" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_5tvpy8fa4e8b69ktrv19l5a55" table="Lesson_AcademicGroup" schema="" catalog="scheduledb" columns="groups_id"/>
-    </table>
-    <table name="Auditorium" schema="" catalog="scheduledb" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="building" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="room" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_664akm5kerbsoc1o08aw5qbhm" table="Lesson_Auditorium" schema="" catalog="scheduledb" columns="auditoriums_id"/>
-    </table>
-    <table name="Course" schema="" catalog="scheduledb" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_swxtnpbei5seidnpkvxyqph49" table="Lesson" schema="" catalog="scheduledb" columns="course_id"/>
-    </table>
-    <table name="Instructor" schema="" catalog="scheduledb" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_a12sowoco6jlvterq9nuyiu1p" table="Lesson_Instructor" schema="" catalog="scheduledb" columns="instructors_id"/>
-    </table>
-    <table name="Lesson" schema="" catalog="scheduledb" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="dayOfWeek" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
-      <column name="number" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6"/>
-      <column name="course_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_swxtnpbei5seidnpkvxyqph49" columns="course_id" ref-table="Course" ref-schema="" ref-catalog="scheduledb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="FK_kuponsdof65ykn8uwwvpkex9x" table="Lesson_AcademicGroup" schema="" catalog="scheduledb" columns="Lesson_id"/>
-      <exported-key name="FK_4sb0i83iov9i3p0krcucbu3c0" table="Lesson_Auditorium" schema="" catalog="scheduledb" columns="Lesson_id"/>
-      <exported-key name="FK_p0aojgft67ecn4ybck37p5rto" table="Lesson_Instructor" schema="" catalog="scheduledb" columns="Lesson_id"/>
-      <index name="FK_swxtnpbei5seidnpkvxyqph49" unique="false" columns="course_id"/>
-    </table>
-    <table name="Lesson_AcademicGroup" schema="" catalog="scheduledb" type="TABLE">
-      <column name="Lesson_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="groups_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <foreign-key name="FK_5tvpy8fa4e8b69ktrv19l5a55" columns="groups_id" ref-table="AcademicGroup" ref-schema="" ref-catalog="scheduledb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_kuponsdof65ykn8uwwvpkex9x" columns="Lesson_id" ref-table="Lesson" ref-schema="" ref-catalog="scheduledb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK_5tvpy8fa4e8b69ktrv19l5a55" unique="false" columns="groups_id"/>
-      <index name="FK_kuponsdof65ykn8uwwvpkex9x" unique="false" columns="Lesson_id"/>
-    </table>
-    <table name="Lesson_Auditorium" schema="" catalog="scheduledb" type="TABLE">
-      <column name="Lesson_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="auditoriums_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <foreign-key name="FK_4sb0i83iov9i3p0krcucbu3c0" columns="Lesson_id" ref-table="Lesson" ref-schema="" ref-catalog="scheduledb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_664akm5kerbsoc1o08aw5qbhm" columns="auditoriums_id" ref-table="Auditorium" ref-schema="" ref-catalog="scheduledb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK_4sb0i83iov9i3p0krcucbu3c0" unique="false" columns="Lesson_id"/>
-      <index name="FK_664akm5kerbsoc1o08aw5qbhm" unique="false" columns="auditoriums_id"/>
-    </table>
-    <table name="Lesson_Instructor" schema="" catalog="scheduledb" type="TABLE">
-      <column name="Lesson_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="instructors_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <foreign-key name="FK_a12sowoco6jlvterq9nuyiu1p" columns="instructors_id" ref-table="Instructor" ref-schema="" ref-catalog="scheduledb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_p0aojgft67ecn4ybck37p5rto" columns="Lesson_id" ref-table="Lesson" ref-schema="" ref-catalog="scheduledb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK_a12sowoco6jlvterq9nuyiu1p" unique="false" columns="instructors_id"/>
-      <index name="FK_p0aojgft67ecn4ybck37p5rto" unique="false" columns="Lesson_id"/>
     </table>
   </data-source>
 </component>

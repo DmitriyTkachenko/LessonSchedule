@@ -1,6 +1,7 @@
 package scheduleApp;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -14,7 +15,8 @@ import java.util.Comparator;
 import java.util.List;
 
 @Controller
-public class LessonController {
+@EnableJpaRepositories
+public class ScheduleController {
 
     @Autowired
     private LessonRepository lessonRepository;
@@ -63,7 +65,9 @@ public class LessonController {
 
         model.addAttribute("lessons", lessonList);
 
-        return "lessons";
+        List<Lesson> lessonsForGroup = lessonRepository.findByGroupName("ДА-22");
+
+        return "schedule";
     }
 
     @RequestMapping(value = "/addLesson", method = RequestMethod.POST)

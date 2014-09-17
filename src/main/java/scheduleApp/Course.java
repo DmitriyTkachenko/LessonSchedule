@@ -9,6 +9,7 @@ public class Course {
     private Integer id;
 
     @Basic
+    @Column(unique = true)
     private String name;
 
     public Integer getId() {

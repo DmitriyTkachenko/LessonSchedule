@@ -28,6 +28,24 @@ public class Lesson {
     @Column(columnDefinition = "tinyint")
     private Number number;
 
+    public String getInstructorsString() {
+        StringBuilder sb = new StringBuilder();
+        for (Instructor i : instructors) {
+            sb.append(i.toString() + ", ");
+        }
+        sb.delete(sb.length() - 2, sb.length() - 1);
+        return sb.toString();
+    }
+
+    public String getAuditoriumsString() {
+        StringBuilder sb = new StringBuilder();
+        for (Auditorium a : auditoriums) {
+            sb.append(a.toString() + ", ");
+        }
+        sb.delete(sb.length() - 2, sb.length() - 1);
+        return sb.toString();
+    }
+
     public Integer getId() {
         return id;
     }
@@ -84,16 +102,4 @@ public class Lesson {
         this.number = number;
     }
 
-    @Override
-    public String toString() {
-        return "Lesson{" +
-                "id=" + id +
-                ", groups=" + groups +
-                ", instructors=" + instructors +
-                ", auditoriums=" + auditoriums +
-                ", course=" + course +
-                ", dayOfWeek=" + dayOfWeek +
-                ", number=" + number +
-                '}';
-    }
 }

@@ -10,6 +10,7 @@ public class Group {
     private Integer id;
 
     @Basic
+    @Column(unique = true)
     private String name;
 
     @Basic
