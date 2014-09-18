@@ -30,7 +30,7 @@
             <!-- Auditorium adding form -->
             <form:form method="post" action="addAuditorium" modelAttribute="auditorium" role="form" class="form-inline">
                 <div class="form-group">
-                    <form:input path="room" class="form-control" placeholder="Комната"/>
+                    <form:input path="room" class="form-control" placeholder="Кімната"/>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
@@ -38,37 +38,37 @@
                         <form:input path="building" class="form-control" placeholder="Корпус"/>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-default">Добавить аудиторию</button>
+                <button type="submit" class="btn btn-default">Додати аудиторію</button>
             </form:form>
 
             <!-- Course adding form -->
             <form:form method="post" action="addCourse" modelAttribute="course" role="form" class="form-inline">
                 <div class="form-group">
-                    <form:input path="name" class="form-control" placeholder="Название предмета"/>
+                    <form:input path="name" class="form-control" placeholder="Назва предмету"/>
                 </div>
-                <button type="submit" class="btn btn-default">Добавить предмет</button>
+                <button type="submit" class="btn btn-default">Додати предмет</button>
             </form:form>
 
             <!-- Group adding form -->
             <form:form method="post" action="addGroup" modelAttribute="group" role="form" class="form-inline">
                 <div class="form-group">
-                    <form:input path="name" class="form-control" placeholder="Название (шифр) группы"/>
+                    <form:input path="name" class="form-control" placeholder="Назва (шифр) групи"/>
                 </div>
                 <div class="form-group">
                     <form:input path="numberOfStudents" class="form-control" placeholder="Контингент"/>
                 </div>
-                <button type="submit" class="btn btn-default">Добавить группу</button>
+                <button type="submit" class="btn btn-default">Додати группу</button>
             </form:form>
 
             <!-- Instructor adding form -->
             <form:form method="post" action="addInstructor" modelAttribute="instructor" role="form" class="form-inline">
                 <div class="form-group">
-                    <form:input path="name" class="form-control" placeholder="Имя преподавателя"/>
+                    <form:input path="name" class="form-control" placeholder="Ім'я викладача"/>
                 </div>
                 <div class="form-group">
-                    <form:input path="title" class="form-control" placeholder="Звание"/>
+                    <form:input path="title" class="form-control" placeholder="Звання"/>
                 </div>
-                <button type="submit" class="btn btn-default">Добавить преподавателя</button>
+                <button type="submit" class="btn btn-default">Додати викладача</button>
             </form:form>
 
             <!-- Lesson creation form -->
@@ -101,7 +101,7 @@
                     <form:options items="${lessonType}" itemLabel="displayName"/>
                 </form:select>
 
-                <input type="submit" name="addLesson" value="Добавить занятие" class="btn btn-default">
+                <input type="submit" name="addLesson" value="Додати заняття" class="btn btn-default">
             </form:form>
 
             <%--
@@ -199,19 +199,19 @@
 
         <script type="text/javascript">
             $('.selectGroups').selectpicker({
-                noneSelectedText: 'Выберите группы'
+                noneSelectedText: 'Оберіть групи'
             });
             $('.selectInstructors').selectpicker({
-                noneSelectedText: 'Выберите преподавателей'
+                noneSelectedText: 'Оберіть викладачів'
             });
             $('.selectAuditoriums').selectpicker({
-                noneSelectedText: 'Выберите аудитории'
+                noneSelectedText: 'Оберіть аудиторії'
             });
             $('.selectCourse').selectpicker({
-                noneSelectedText: 'Выберите предмет'
+                noneSelectedText: 'Оберіть предмет'
             });
             $('.selectpicker').selectpicker({
-                noneResultsText: "Ничего не найдено по запросу"
+                noneResultsText: "Нічого не знайдено по запиту"
             });
         </script>
     </body>
