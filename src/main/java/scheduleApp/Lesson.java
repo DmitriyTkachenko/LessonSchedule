@@ -28,6 +28,9 @@ public class Lesson {
     @Column(columnDefinition = "tinyint")
     private Number number;
 
+    @Column(columnDefinition = "tinyint")
+    private LessonType lessonType;
+
     public String getInstructorsString() {
         StringBuilder sb = new StringBuilder();
         for (Instructor i : instructors) {
@@ -102,4 +105,11 @@ public class Lesson {
         this.number = number;
     }
 
+    public LessonType getLessonType() {
+        return lessonType;
+    }
+
+    public void setLessonType(LessonType lessonType) {
+        this.lessonType = lessonType;
+    }
 }

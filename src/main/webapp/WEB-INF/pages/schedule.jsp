@@ -97,6 +97,10 @@
                     <form:options items="${number}" itemLabel="displayName"/>
                 </form:select>
 
+                <form:select path="lessonType" class="selectpicker" data-live-search="true">
+                    <form:options items="${lessonType}" itemLabel="displayName"/>
+                </form:select>
+
                 <input type="submit" name="addLesson" value="Добавить занятие" class="btn btn-default">
             </form:form>
 
@@ -146,7 +150,7 @@
                                             <table>
                                                 <tr><td>${lessons[count].course.name}</td></tr>
                                                 <tr><td>${lessons[count].instructorsString}</td></tr>
-                                                <tr><td>${lessons[count].auditoriumsString}</td></tr>
+                                                <tr><td>${lessons[count].auditoriumsString} ${lessons[count].lessonType.displayName}</td></tr>
                                             </table>
                                             <c:if test="${fn:length(lessons) > count}">
                                                 <c:set var="count" value="${count + 1}" scope="page"/>
