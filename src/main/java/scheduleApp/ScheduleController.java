@@ -106,34 +106,39 @@ public class ScheduleController {
         return "redirect:" + referer;
     }
 
-    @RequestMapping(value = "/addLesson", method = RequestMethod.POST)
-    public String addLesson(@Valid @ModelAttribute("lesson") Lesson lesson, BindingResult result) {
+    @RequestMapping(value = "/schedule/*/*/addLesson", method = RequestMethod.POST)
+    public String addLesson(@Valid @ModelAttribute("lesson") Lesson lesson, BindingResult result, HttpServletRequest request) {
         lessonRepository.save(lesson);
-        return "redirect:/";
+        String referer = request.getHeader("Referer");
+        return "redirect:" + referer;
     }
 
-    @RequestMapping(value = "/addAuditorium", method = RequestMethod.POST)
-    public String addAuditorium(@ModelAttribute("auditorium") Auditorium auditorium, BindingResult result) {
+    @RequestMapping(value = "/schedule/*/*/addAuditorium", method = RequestMethod.POST)
+    public String addAuditorium(@ModelAttribute("auditorium") Auditorium auditorium, BindingResult result, HttpServletRequest request) {
         auditoriumRepository.save(auditorium);
-        return "redirect:/";
+        String referer = request.getHeader("Referer");
+        return "redirect:" + referer;
     }
 
-    @RequestMapping(value = "/addCourse", method = RequestMethod.POST)
-    public String addCourse(@ModelAttribute("course") Course course, BindingResult result) {
+    @RequestMapping(value = "/schedule/*/*/addCourse", method = RequestMethod.POST)
+    public String addCourse(@ModelAttribute("course") Course course, BindingResult result, HttpServletRequest request) {
         courseRepository.save(course);
-        return "redirect:/";
+        String referer = request.getHeader("Referer");
+        return "redirect:" + referer;
     }
 
-    @RequestMapping(value = "/addGroup", method = RequestMethod.POST)
-    public String addGroup(@ModelAttribute("group") Group group, BindingResult result) {
+    @RequestMapping(value = "/schedule/*/*/addGroup", method = RequestMethod.POST)
+    public String addGroup(@ModelAttribute("group") Group group, BindingResult result, HttpServletRequest request) {
         groupRepository.save(group);
-        return "redirect:/";
+        String referer = request.getHeader("Referer");
+        return "redirect:" + referer;
     }
 
-    @RequestMapping(value = "/addInstructor", method = RequestMethod.POST)
-    public String addInstructor(@ModelAttribute("instructor") Instructor instructor, BindingResult result) {
+    @RequestMapping(value = "/schedule/*/*/addInstructor", method = RequestMethod.POST)
+    public String addInstructor(@ModelAttribute("instructor") Instructor instructor, BindingResult result, HttpServletRequest request) {
         instructorRepository.save(instructor);
-        return "redirect:/";
+        String referer = request.getHeader("Referer");
+        return "redirect:" + referer;
     }
 
 //    @RequestMapping("/delete/{userId}")

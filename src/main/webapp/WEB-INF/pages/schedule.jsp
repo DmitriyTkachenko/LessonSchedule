@@ -38,7 +38,7 @@
                         <form:input path="building" class="form-control" placeholder="Корпус"/>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-default">Додати аудиторію</button>
+                <button type="submit" class="btn btn-primary">Додати аудиторію</button>
             </form:form>
 
             <!-- Course adding form -->
@@ -46,7 +46,7 @@
                 <div class="form-group">
                     <form:input path="name" class="form-control" placeholder="Назва предмету"/>
                 </div>
-                <button type="submit" class="btn btn-default">Додати предмет</button>
+                <button type="submit" class="btn btn-primary">Додати предмет</button>
             </form:form>
 
             <!-- Group adding form -->
@@ -57,7 +57,7 @@
                 <div class="form-group">
                     <form:input path="numberOfStudents" class="form-control" placeholder="Контингент"/>
                 </div>
-                <button type="submit" class="btn btn-default">Додати группу</button>
+                <button type="submit" class="btn btn-primary">Додати группу</button>
             </form:form>
 
             <!-- Instructor adding form -->
@@ -68,7 +68,7 @@
                 <div class="form-group">
                     <form:input path="title" class="form-control" placeholder="Звання"/>
                 </div>
-                <button type="submit" class="btn btn-default">Додати викладача</button>
+                <button type="submit" class="btn btn-primary">Додати викладача</button>
             </form:form>
 
             <!-- Lesson creation form -->
@@ -101,7 +101,7 @@
                     <form:options items="${lessonType}" itemLabel="displayName"/>
                 </form:select>
 
-                <input type="submit" name="addLesson" value="Додати заняття" class="btn btn-default">
+                <input type="submit" name="addLesson" value="Додати заняття" class="btn btn-primary">
             </form:form>
 
             <%--
