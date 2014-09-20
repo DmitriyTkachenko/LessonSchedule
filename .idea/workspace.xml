@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd83edf2-ef86-428b-80ec-f2a231287ef3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/GroupService.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/GroupService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/InstructorService.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/InstructorService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/ScheduleController.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/ScheduleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/SearchController.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/SearchController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/schedule.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/schedule.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -52,11 +49,11 @@
       <file leaf-file-name="ScheduleController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/ScheduleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="710" max-vertical-offset="2703">
-              <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1390" max-vertical-offset="2720">
+              <caret line="109" column="99" selection-start-line="109" selection-start-column="99" selection-end-line="109" selection-end-column="99" />
               <folding>
-                <element signature="e#1067#1468#0" expanded="true" />
-                <element signature="e#1461#1462#0" expanded="true" />
+                <element signature="e#1113#1514#0" expanded="true" />
+                <element signature="e#1507#1508#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,8 +100,8 @@
       <file leaf-file-name="schedule.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/schedule.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32416502" vertical-offset="2555" max-vertical-offset="3944">
-              <caret line="160" column="66" selection-start-line="160" selection-start-column="66" selection-end-line="160" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.63765824" vertical-offset="2402" max-vertical-offset="3944">
+              <caret line="165" column="51" selection-start-line="165" selection-start-column="51" selection-end-line="165" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -147,8 +144,8 @@
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/GroupService.java" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/InstructorService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/schedule.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/SearchController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/schedule.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/ScheduleController.java" />
       </list>
     </option>
@@ -853,7 +850,7 @@
       <workItem from="1411220015367" duration="30000" />
       <workItem from="1411220046698" duration="1469000" />
       <workItem from="1411221517934" duration="2756000" />
-      <workItem from="1411224383216" duration="7462000" />
+      <workItem from="1411224383216" duration="8893000" />
     </task>
     <task id="LOCAL-00001" summary="Deleted unneeded third-party code. JSP imports changed. persistence.xml adjusted.">
       <created>1410251965800</created>
@@ -915,11 +912,15 @@
       <created>1411224200395</created>
       <updated>1411224200395</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Changed URLs to be compliant with REST. Made corresponding changes to ScheduleController and SearchController. Slightly altered JSP. Added convenience method to GroupService and InstructorService.">
+      <created>1411234950297</created>
+      <updated>1411234950297</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61341000" />
+    <option name="totallyTimeSpent" value="62772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -936,7 +937,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39308855" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26025918" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32575756" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -986,11 +987,12 @@
     <MESSAGE value="JPA relationships between Lesson and Group, Lesson and Instructor made bidirectional. Declared new &quot;find&quot; methods in LessonRepository." />
     <MESSAGE value="Added SearchController." />
     <MESSAGE value="Implemented schedule search by group and instructor. Added GroupService, InstructorService, GroupSearchForm and InstructorSearchForm classes. Implemented SearchController. Adjusted ScheduleController. Added two select forms on index page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented schedule search by group and instructor. Added GroupService, InstructorService, GroupSearchForm and InstructorSearchForm classes. Implemented SearchController. Adjusted ScheduleController. Added two select forms on index page." />
+    <MESSAGE value="Changed URLs to be compliant with REST. Made corresponding changes to ScheduleController and SearchController. Slightly altered JSP. Added convenience method to GroupService and InstructorService." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed URLs to be compliant with REST. Made corresponding changes to ScheduleController and SearchController. Slightly altered JSP. Added convenience method to GroupService and InstructorService." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="51" />
+      <option name="time" value="57" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1011,8 +1013,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="2227">
           <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
           <folding>
-            <element signature="e#1067#1468#0" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
+            <element signature="e#1113#1514#0" expanded="true" />
+            <element signature="e#1507#1508#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1046,8 +1048,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="2295">
           <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
           <folding>
-            <element signature="e#1067#1468#0" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
+            <element signature="e#1113#1514#0" expanded="true" />
+            <element signature="e#1507#1508#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1089,8 +1091,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2108">
           <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
           <folding>
-            <element signature="e#1067#1468#0" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
+            <element signature="e#1113#1514#0" expanded="true" />
+            <element signature="e#1507#1508#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1124,8 +1126,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="2278">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding>
-            <element signature="e#1067#1468#0" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
+            <element signature="e#1113#1514#0" expanded="true" />
+            <element signature="e#1507#1508#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1309,19 +1311,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/ScheduleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="710" max-vertical-offset="2703">
-          <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1390" max-vertical-offset="2720">
+          <caret line="109" column="99" selection-start-line="109" selection-start-column="99" selection-end-line="109" selection-end-column="99" />
           <folding>
-            <element signature="e#1067#1468#0" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
+            <element signature="e#1113#1514#0" expanded="true" />
+            <element signature="e#1507#1508#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/schedule.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32416502" vertical-offset="2555" max-vertical-offset="3944">
-          <caret line="160" column="66" selection-start-line="160" selection-start-column="66" selection-end-line="160" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.63765824" vertical-offset="2402" max-vertical-offset="3944">
+          <caret line="165" column="51" selection-start-line="165" selection-start-column="51" selection-end-line="165" selection-end-column="51" />
           <folding />
         </state>
       </provider>

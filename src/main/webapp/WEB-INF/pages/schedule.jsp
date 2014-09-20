@@ -158,7 +158,7 @@
                                                 <tr><td>${lessons[count].instructorsString}</td></tr>
                                                 <tr><td>${lessons[count].auditoriumsString} ${lessons[count].lessonType.displayName}</td></tr>
                                                 <tr><td>
-                                                    <form action="delete/${lessons[count].id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Видалити"/></form>
+                                                    <form action="delete/${lessons[count].id}/" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Видалити"/></form>
                                                 </td></tr>
                                             </table>
                                             <c:if test="${fn:length(lessons) > count}">

@@ -7,6 +7,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -98,10 +99,11 @@ public class ScheduleController {
         model.addAttribute("numbers", Number.values());
     }
 
-    @RequestMapping(value = "/schedule?groupId={groupId}/delete/{lessonId}")
-    public String deleteLesson(@PathVariable("lessonId") Integer lessonId, @PathVariable("groupId") Integer groupId) {
+    @RequestMapping(value = "/schedule/group/{groupId}/delete/{lessonId}/")
+    public String deleteLesson(@PathVariable("lessonId") Integer lessonId, @PathVariable("groupId") Integer groupId, HttpServletRequest request) {
         lessonRepository.delete(lessonId);
-        return "redirect:/schedule?groupId=" + groupId;
+        String referer = request.getHeader("Referer");
+        return "redirect:" + referer;
     }
 
     @RequestMapping(value = "/addLesson", method = RequestMethod.POST)
