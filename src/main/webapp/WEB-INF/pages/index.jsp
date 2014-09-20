@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/bootstrap-select/bootstrap-select.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/schedule.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/index.css">
 
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/bootstrap-select/bootstrap-select.min.js"></script>
@@ -19,16 +19,25 @@
 </head>
 <body>
     <div class="container">
-
         <!-- Schedule search by group -->
-        <form:form method="post" modelAttribute="group" action="showScheduleForGroup" role="form" class="form-inline">
-            <form:select class="selectGroups selectpicker" data-live-search="true" path="">
+        <h1>Пошук розкладу для групи</h1>
+        <form:form method="post" modelAttribute="groupSearchForm" action="showScheduleForGroup" role="form" class="form-inline">
+            <form:select required="true" class="selectpicker" data-live-search="true" path="group">
                 <form:options items="${groups}" itemValue="id"/>
             </form:select>
 
-            <input type="submit" name="showLessonForGroup" value="Показати розклад" class="btn btn-default">
+            <input type="submit" name="showScheduleForGroup" value="Показати розклад" class="btn btn-default">
         </form:form>
 
+        <!-- Schedule search by instructor -->
+        <h1>Пошук розкладу для викладача</h1>
+        <form:form method="post" modelAttribute="instructorSearchForm" action="showScheduleForInstructor" role="form" class="form-inline">
+            <form:select required="true" class="selectpicker" data-live-search="true" path="instructor">
+                <form:options items="${instructors}" itemValue="id"/>
+            </form:select>
+
+            <input type="submit" name="showScheduleForInstructor" value="Показати розклад" class="btn btn-default">
+        </form:form>
     </div>
 </body>
 </html>

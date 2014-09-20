@@ -8,8 +8,10 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -33,15 +35,22 @@ public class ScheduleController {
     @Autowired
     private InstructorRepository instructorRepository;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String showLessons(ModelMap model) {
+    @Autowired
+    private GroupService groupService;
+
+    @Autowired
+    private InstructorService instructorService;
+
+    @RequestMapping(value = "/schedule", method = RequestMethod.GET)
+    public String showLessons(@RequestParam(value = "groupId", required = false) Integer groupId, @RequestParam(value = "instructorId", required = false) Integer instructorId, ModelMap model) {
+        // for input forms
         model.addAttribute("auditorium", new Auditorium());
         model.addAttribute("course", new Course());
         model.addAttribute("group", new Group());
         model.addAttribute("instructor", new Instructor());
-
         model.addAttribute("lesson", new Lesson());
 
+        // for constructing Lesson through select
         model.addAttribute("courses", courseRepository.findAll());
         model.addAttribute("auditoriums", auditoriumRepository.findAll());
         model.addAttribute("groups", groupRepository.findAll());
@@ -49,7 +58,12 @@ public class ScheduleController {
         model.addAttribute("daysOfWeek", DayOfWeek.values());
         model.addAttribute("numbers", Number.values());
 
-        List<Lesson> lessonList = lessonRepository.findAll();
+        List<Lesson> lessonList = new ArrayList<>();
+        if (groupId != null) {
+            lessonList = lessonRepository.findByGroups(groupService.getGroupAsList(groupId));
+        } else if (instructorId != null) {
+            lessonList = lessonRepository.findByInstructors(instructorService.getInstructorAsList(instructorId));
+        }
 
         Collections.sort(lessonList, new Comparator<Lesson>() {
             @Override
