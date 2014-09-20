@@ -20,13 +20,25 @@ public class User {
     @Column(columnDefinition = "tinyint")
     private UserRole userRole;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public UserRole getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(UserRole userRole) {
+        this.userRole = userRole;
+    }
+
     public User(String login, String password) {
         this.login = login;
         this.password = password;
-    }
-
-    public User() {
-
     }
 
     public String getLogin() {
