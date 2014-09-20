@@ -17,4 +17,8 @@ public class InstructorService {
         list.add(instructor);
         return list;
     }
+
+    public String getInstructorName(Integer id) {
+        return instructorRepository.findOne(id).getName();
+    }
 }

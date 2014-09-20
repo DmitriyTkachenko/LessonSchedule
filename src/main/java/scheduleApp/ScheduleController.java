@@ -5,10 +5,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -41,8 +38,50 @@ public class ScheduleController {
     @Autowired
     private InstructorService instructorService;
 
+    private Comparator<Lesson> lessonComparator = new Comparator<Lesson>() {
+        @Override
+        public int compare(Lesson l1, Lesson l2) {
+            int numberCmp = l1.getNumber().getValue() - l2.getNumber().getValue();
+            if (numberCmp != 0) {
+                return numberCmp;
+            }
+            int dayOfWeekCmp = l1.getDayOfWeek().getValue() - l2.getDayOfWeek().getValue();
+            return dayOfWeekCmp;
+        }
+    };
+
+    private List<Lesson> lessonList = new ArrayList<>();
+
     @RequestMapping(value = "/schedule", method = RequestMethod.GET)
-    public String showLessons(@RequestParam(value = "groupId", required = false) Integer groupId, @RequestParam(value = "instructorId", required = false) Integer instructorId, ModelMap model) {
+    public String showSchedule(@RequestParam(value = "groupId", required = false) Integer groupId, @RequestParam(value = "instructorId", required = false) Integer instructorId, ModelMap model) {
+        return "schedule";
+    }
+
+    @RequestMapping(value = "/schedule/group/{groupId}/", method = RequestMethod.GET)
+    public String showScheduleForGroup(@PathVariable("groupId") Integer groupId, ModelMap model) {
+        prepareForEditing(model);
+        lessonList = lessonRepository.findByGroups(groupService.getGroupAsList(groupId));
+        Collections.sort(lessonList, lessonComparator);
+        model.addAttribute("lessons", lessonList);
+        model.addAttribute("mode", "group");
+        model.addAttribute("id", groupId);
+        model.addAttribute("name", groupService.getGroupName(groupId));
+        return "schedule";
+    }
+
+    @RequestMapping(value = "/schedule/instructor/{instructorId}/", method = RequestMethod.GET)
+    public String showScheduleForInstructor(@PathVariable("instructorId") Integer instructorId, ModelMap model) {
+        prepareForEditing(model);
+        lessonList = lessonRepository.findByInstructors(instructorService.getInstructorAsList(instructorId));
+        Collections.sort(lessonList, lessonComparator);
+        model.addAttribute("lessons", lessonList);
+        model.addAttribute("mode", "instructor");
+        model.addAttribute("id", instructorId);
+        model.addAttribute("name", instructorService.getInstructorName(instructorId));
+        return "schedule";
+    }
+
+    public void prepareForEditing(ModelMap model) {
         // for input forms
         model.addAttribute("auditorium", new Auditorium());
         model.addAttribute("course", new Course());
@@ -57,29 +96,12 @@ public class ScheduleController {
         model.addAttribute("instructors", instructorRepository.findAll());
         model.addAttribute("daysOfWeek", DayOfWeek.values());
         model.addAttribute("numbers", Number.values());
+    }
 
-        List<Lesson> lessonList = new ArrayList<>();
-        if (groupId != null) {
-            lessonList = lessonRepository.findByGroups(groupService.getGroupAsList(groupId));
-        } else if (instructorId != null) {
-            lessonList = lessonRepository.findByInstructors(instructorService.getInstructorAsList(instructorId));
-        }
-
-        Collections.sort(lessonList, new Comparator<Lesson>() {
-            @Override
-            public int compare(Lesson l1, Lesson l2) {
-                int numberCmp = l1.getNumber().getValue() - l2.getNumber().getValue();
-                if (numberCmp != 0) {
-                    return numberCmp;
-                }
-                int dayOfWeekCmp = l1.getDayOfWeek().getValue() - l2.getDayOfWeek().getValue();
-                return dayOfWeekCmp;
-            }
-        });
-
-        model.addAttribute("lessons", lessonList);
-
-        return "schedule";
+    @RequestMapping(value = "/schedule?groupId={groupId}/delete/{lessonId}")
+    public String deleteLesson(@PathVariable("lessonId") Integer lessonId, @PathVariable("groupId") Integer groupId) {
+        lessonRepository.delete(lessonId);
+        return "redirect:/schedule?groupId=" + groupId;
     }
 
     @RequestMapping(value = "/addLesson", method = RequestMethod.POST)

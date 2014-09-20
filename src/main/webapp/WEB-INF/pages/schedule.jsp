@@ -127,6 +127,12 @@
             <%--</form:form>--%>
 
             <!-- Schedule table generation -->
+            <c:if test="${mode == 'group'}">
+                <h1 align="center">Розклад для групи ${name}</h1>
+            </c:if>
+            <c:if test="${mode == 'instructor'}">
+                <h1 align="center">Розклад для викладача ${name}</h1>
+            </c:if>
             <c:if test="${!empty lessons}">
                 <table class="table table-bordered">
                     <thead>
@@ -151,6 +157,9 @@
                                                 <tr><td>${lessons[count].course.name}</td></tr>
                                                 <tr><td>${lessons[count].instructorsString}</td></tr>
                                                 <tr><td>${lessons[count].auditoriumsString} ${lessons[count].lessonType.displayName}</td></tr>
+                                                <tr><td>
+                                                    <form action="delete/${lessons[count].id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Видалити"/></form>
+                                                </td></tr>
                                             </table>
                                             <c:if test="${fn:length(lessons) > count}">
                                                 <c:set var="count" value="${count + 1}" scope="page"/>

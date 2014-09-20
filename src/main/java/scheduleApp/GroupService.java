@@ -17,4 +17,8 @@ public class GroupService {
         list.add(group);
         return list;
     }
+
+    public String getGroupName(Integer id) {
+        return groupRepository.findOne(id).getName();
+    }
 }

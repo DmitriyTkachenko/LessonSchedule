@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
+import java.net.URLDecoder;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 @Controller
 @EnableJpaRepositories
@@ -33,11 +36,11 @@ public class SearchController {
 
     @RequestMapping(value = "/showScheduleForGroup", method = RequestMethod.POST)
     public String showScheduleForGroup(@Valid @ModelAttribute("groupSearchForm") GroupSearchForm groupSearchForm, BindingResult result) {
-        return "redirect:/schedule?groupId=" + groupSearchForm.getGroup().getId();
+        return "redirect:/schedule/group/" + groupSearchForm.getGroup().getId() + "/";
     }
 
     @RequestMapping(value = "/showScheduleForInstructor", method = RequestMethod.POST)
     public String showScheduleForInstructor(@Valid @ModelAttribute("instructorSearchForm") InstructorSearchForm instructorSearchForm, BindingResult result) {
-        return "redirect:/schedule?instructorId=" + instructorSearchForm.getInstructor().getId();
+        return "redirect:/schedule/instructor/" + instructorSearchForm.getInstructor().getId() + "/";
     }
 }
