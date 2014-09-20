@@ -1,6 +1,7 @@
 package scheduleApp;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Instructor {
@@ -13,6 +14,9 @@ public class Instructor {
 
     @Basic
     private String title;
+
+    @ManyToMany(mappedBy = "instructors")
+    private List<Lesson> lessons;
 
     public Integer getId() {
         return id;

@@ -1,6 +1,7 @@
 package scheduleApp;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "AcademicGroup")
@@ -15,6 +16,9 @@ public class Group {
 
     @Basic
     private Integer numberOfStudents;
+
+    @ManyToMany(mappedBy = "groups")
+    private List<Lesson> lessons;
 
     public Integer getId() {
         return id;
@@ -38,6 +42,14 @@ public class Group {
 
     public void setNumberOfStudents(Integer numberOfStudents) {
         this.numberOfStudents = numberOfStudents;
+    }
+
+    public List<Lesson> getLessons() {
+        return lessons;
+    }
+
+    public void setLessons(List<Lesson> lessons) {
+        this.lessons = lessons;
     }
 
     @Override

@@ -65,8 +65,6 @@ public class ScheduleController {
 
         model.addAttribute("lessons", lessonList);
 
-        //List<Lesson> lessonsForGroup = lessonRepository.findByGroupName("ДА-22");
-
         return "schedule";
     }
 

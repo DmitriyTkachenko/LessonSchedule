@@ -2,7 +2,6 @@
   <artifact type="exploded-war" name="LessonSchedule:war exploded">
     <output-path>$PROJECT_DIR$/target/LessonSchedule-1.0-SNAPSHOT</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="LessonSchedule/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="LessonSchedule" />
@@ -43,6 +42,10 @@
           <element id="library" level="project" name="Maven: org.json:json:20140107" />
         </element>
       </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="D:\Dropbox\IdeaProjects\LessonSchedule\target/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="LessonSchedule/web/Web" />
     </root>
   </artifact>
 </component>

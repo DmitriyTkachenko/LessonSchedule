@@ -34,18 +34,22 @@ public class Lesson {
     public String getInstructorsString() {
         StringBuilder sb = new StringBuilder();
         for (Instructor i : instructors) {
-            sb.append(i.toString() + ", ");
+            sb.append(i.toString()).append(", ");
         }
-        sb.delete(sb.length() - 2, sb.length() - 1);
+        if (sb.length() > 1) {
+            sb.delete(sb.length() - 2, sb.length() - 1);
+        }
         return sb.toString();
     }
 
     public String getAuditoriumsString() {
         StringBuilder sb = new StringBuilder();
         for (Auditorium a : auditoriums) {
-            sb.append(a.toString() + ", ");
+            sb.append(a.toString()).append(", ");
         }
-        sb.delete(sb.length() - 2, sb.length() - 1);
+        if (sb.length() > 1) {
+            sb.delete(sb.length() - 2, sb.length() - 1);
+        }
         return sb.toString();
     }
 
