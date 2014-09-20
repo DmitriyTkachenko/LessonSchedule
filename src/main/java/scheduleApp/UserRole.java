@@ -1,10 +1,8 @@
 package scheduleApp;
 
-public enum UserRoleEnum {
-
+public enum UserRole {
     ADMIN,
-    USER,
-    ANONYMOUS;
+    EDITOR,
 
     UserRoleEnum() {
     }

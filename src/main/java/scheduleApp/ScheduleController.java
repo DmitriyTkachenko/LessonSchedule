@@ -55,6 +55,7 @@ public class ScheduleController {
 
     @RequestMapping(value = "/schedule", method = RequestMethod.GET)
     public String showSchedule(@RequestParam(value = "groupId", required = false) Integer groupId, @RequestParam(value = "instructorId", required = false) Integer instructorId, ModelMap model) {
+        prepareForEditing(model);
         return "schedule";
     }
 
