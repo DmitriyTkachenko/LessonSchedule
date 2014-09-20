@@ -19,19 +19,16 @@
 </head>
 <body>
     <div class="container">
-        <!-- Schedule search form -->
-        <form:form method="post" action="addAuditorium" modelAttribute="auditorium" role="form" class="form-inline">
-            <div class="form-group">
-                <form:input path="room" class="form-control" placeholder="Комната"/>
-            </div>
-            <div class="form-group">
-                <div class="input-group">
-                    <div class="input-group-addon">-</div>
-                    <form:input path="building" class="form-control" placeholder="Корпус"/>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-default">Добавить аудиторию</button>
+
+        <!-- Schedule search by group -->
+        <form:form method="post" modelAttribute="group" action="showScheduleForGroup" role="form" class="form-inline">
+            <form:select class="selectGroups selectpicker" data-live-search="true" path="">
+                <form:options items="${groups}" itemValue="id"/>
+            </form:select>
+
+            <input type="submit" name="showLessonForGroup" value="Показати розклад" class="btn btn-default">
         </form:form>
+
     </div>
 </body>
 </html>
