@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd83edf2-ef86-428b-80ec-f2a231287ef3" name="Default" comment="Localization improved.">
-      <change type="DELETED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\.idea\dataSources.ids" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/Group.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/Group.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/Instructor.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/Instructor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/Lesson.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/Lesson.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/LessonRepository.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/LessonRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/LessonSchedule_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/LessonSchedule_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/ScheduleController.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/ScheduleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+    <list default="true" id="bd83edf2-ef86-428b-80ec-f2a231287ef3" name="Default" comment="JPA relationships between Lesson and Group, Lesson and Instructor made bidirectional. Declared new &quot;find&quot; methods in LessonRepository.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LessonSchedule.iws" />
@@ -69,7 +60,7 @@
       <file leaf-file-name="Lesson.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/Lesson.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6593592" vertical-offset="0" max-vertical-offset="1547">
+            <state vertical-scroll-proportion="0.6571429" vertical-offset="0" max-vertical-offset="1547">
               <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
               <folding />
             </state>
@@ -463,6 +454,11 @@
       <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -504,6 +500,9 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <method />
     </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
@@ -735,7 +734,7 @@
       <workItem from="1410971963670" duration="4789000" />
       <workItem from="1411034134305" duration="1494000" />
       <workItem from="1411036967460" duration="4835000" />
-      <workItem from="1411215007585" duration="1867000" />
+      <workItem from="1411215007585" duration="2047000" />
     </task>
     <task id="LOCAL-00001" summary="Deleted unneeded third-party code. JSP imports changed. persistence.xml adjusted.">
       <created>1410251965800</created>
@@ -797,11 +796,17 @@
       <option name="project" value="LOCAL" />
       <updated>1411037408565</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="JPA relationships between Lesson and Group, Lesson and Instructor made bidirectional. Declared new &quot;find&quot; methods in LessonRepository.">
+      <created>1411216974060</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1411216974060</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46662000" />
+    <option name="totallyTimeSpent" value="46842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -810,7 +815,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33026317" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32575756" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -824,8 +829,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30394736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32792208" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263158" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32575756" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -864,7 +869,8 @@
     <MESSAGE value="Altered JPA relationships of Lesson's properties. Added filter to set encoding of characters in POST request to UTF-8." />
     <MESSAGE value="LessonType enum added with the corresponding select form." />
     <MESSAGE value="Localization improved." />
-    <option name="LAST_COMMIT_MESSAGE" value="Localization improved." />
+    <MESSAGE value="JPA relationships between Lesson and Group, Lesson and Instructor made bidirectional. Declared new &quot;find&quot; methods in LessonRepository." />
+    <option name="LAST_COMMIT_MESSAGE" value="JPA relationships between Lesson and Group, Lesson and Instructor made bidirectional. Declared new &quot;find&quot; methods in LessonRepository." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1266,7 +1272,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/Lesson.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6593592" vertical-offset="0" max-vertical-offset="1547">
+        <state vertical-scroll-proportion="0.6571429" vertical-offset="0" max-vertical-offset="1547">
           <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding />
         </state>
