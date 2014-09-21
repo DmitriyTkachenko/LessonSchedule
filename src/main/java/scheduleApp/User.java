@@ -1,7 +1,5 @@
 package scheduleApp;
 
-import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
-
 import javax.persistence.*;
 
 @Entity

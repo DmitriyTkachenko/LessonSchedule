@@ -4,6 +4,7 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <html>
     <head>
@@ -26,9 +27,9 @@
     <body>
 
         <div class="container">
-
+        <sec:authorize access="hasRole('EDITOR') or hasRole('ADMIN')">
             <!-- Auditorium adding form -->
-            <form:form method="post" action="addAuditorium" modelAttribute="auditorium" role="form" class="form-inline">
+            <form:form method="post" action="/addAuditorium" modelAttribute="auditorium" role="form" class="form-inline">
                 <div class="form-group">
                     <form:input path="room" class="form-control" placeholder="Кімната"/>
                 </div>
@@ -103,28 +104,7 @@
 
                 <input type="submit" name="addLesson" value="Додати заняття" class="btn btn-primary">
             </form:form>
-
-            <%--
-            <form:form method="POST" action="chooseAuditorium" modelAttribute="auditoriumSelect">
-                <form:select path="room">
-                    <form:options items="${auditoriums}" itemLabel="room"/>
-                </form:select>
-                <input type="submit" name="submit" value="Submit"></td>
-            </form:form>
-            --%>
-
-            <%--<form:form method="post" action="addLesson" modelAttribute="lesson" role="form" class="form-inline">--%>
-                <%--<spring:bind path="course.name">--%>
-                    <%--<input type="text" class="form-control" placeholder="Course name"/>--%>
-                <%--</spring:bind>--%>
-                <%--<spring:bind path="instructor.title">--%>
-                    <%--<input type="text" class="form-control" placeholder="Instructor title"/>--%>
-                <%--</spring:bind>--%>
-                <%--<spring:bind path="instructor.name">--%>
-                    <%--<input type="text" class="form-control" placeholder="Instructor name"/>--%>
-                <%--</spring:bind>--%>
-                <%--<spring:bind path=""--%>
-            <%--</form:form>--%>
+        </sec:authorize>
 
             <!-- Schedule table generation -->
             <c:if test="${mode == 'group'}">
@@ -157,9 +137,11 @@
                                                 <tr><td>${lessons[count].course.name}</td></tr>
                                                 <tr><td>${lessons[count].instructorsString}</td></tr>
                                                 <tr><td>${lessons[count].auditoriumsString} ${lessons[count].lessonType.displayName}</td></tr>
-                                                <tr><td>
-                                                    <form action="delete/${lessons[count].id}/" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Видалити"/></form>
-                                                </td></tr>
+                                                <sec:authorize access="hasRole('EDITOR') or hasRole('ADMIN')">
+                                                    <tr><td>
+                                                        <form action="delete/${lessons[count].id}/" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Видалити"/></form>
+                                                    </td></tr>
+                                                </sec:authorize>
                                             </table>
                                             <c:if test="${fn:length(lessons) > count}">
                                                 <c:set var="count" value="${count + 1}" scope="page"/>
@@ -174,35 +156,6 @@
                     </tbody>
                 </table>
             </c:if>
-
-            <%--<c:if test="${!empty users}">--%>
-                <%--<h3>Users</h3>--%>
-                <%--<table class="table table-bordered table-striped">--%>
-                    <%--<thead>--%>
-                        <%--<tr>--%>
-                            <%--<th>Name</th>--%>
-                            <%--<th>Email</th>--%>
-                            <%--<th>&nbsp;</th>--%>
-                        <%--</tr>--%>
-                    <%--</thead>--%>
-                    <%--<tbody>--%>
-                        <%--<c:forEach items="${users}" var="user">--%>
-                            <%--<tr>--%>
-                                <%--<td>${user.lastName}, ${user.firstName}</td>--%>
-                                <%--<td>${user.email}</td>--%>
-                                <%--<td>--%>
-                                    <%--<form:form action="delete/${user.id}" method="post">--%>
-                                        <%--<input type="submit"--%>
-                                                    <%--class="btn btn-danger btn-mini"--%>
-                                                                                               <%--value="Delete"/>--%>
-                                    <%--</form:form>--%>
-                                <%--</td>--%>
-                            <%--</tr>--%>
-                        <%--</c:forEach>--%>
-                    <%--</tbody>--%>
-                <%--</table>--%>
-            <%--</c:if>--%>
-
 
         </div>
 

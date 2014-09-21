@@ -24,7 +24,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="NewPersistenceUnit" />
-          <factory-entry name="defaultPersistenceUnit" value="5a7e9e89-d0da-48fb-9a10-13ec22d3fe3b" />
+          <factory-entry name="defaultPersistenceUnit" value="8c4c6712-426c-43d6-8eac-ca274a7f84c6" />
           <factory-entry name="entityManagerFactory" />
           <factory-entry name="persistenceUnit" value="2927f9de-a16d-4705-b2c0-99c0b4ebb111" />
         </datasource-mapping>

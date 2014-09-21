@@ -11,8 +11,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Import({ SecurityConfig.class })
 @ImportResource({"file:**/webapp/WEB-INF/mvc-dispatcher-servlet.xml"})
 public class WebAppConfig extends WebMvcConfigurerAdapter {
+
     @Bean
     public UserDetailsService getUserDetailsService(){
         return new UserDetailsServiceImpl();
     }
+
 }

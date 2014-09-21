@@ -1,7 +1,5 @@
 package scheduleApp;
 
-import java.util.ArrayList;
-
 public class GroupSearchForm {
     private Group group;
 
