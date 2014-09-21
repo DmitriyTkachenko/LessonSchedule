@@ -3,6 +3,7 @@ package scheduleApp.entity;
 import javax.persistence.*;
 
 @Entity
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"building", "room"}))
 public class Auditorium {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

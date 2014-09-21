@@ -31,7 +31,13 @@ public class InstructorServiceImpl implements InstructorService {
 
     @Override
     public Instructor save(Instructor instructor) {
-        return instructorRepository.save(instructor);
+        try {
+            return instructorRepository.save(instructor);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override

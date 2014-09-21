@@ -11,7 +11,8 @@ public class Group {
     private Integer id;
 
     @Basic
-    @Column(unique = true)
+
+    @Column(name = "name", unique = true)
     private String name;
 
     @Basic

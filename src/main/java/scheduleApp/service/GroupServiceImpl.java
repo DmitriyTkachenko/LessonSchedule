@@ -31,7 +31,13 @@ public class GroupServiceImpl implements GroupService {
 
     @Override
     public Group save(Group group) {
-        return groupRepository.save(group);
+        try {
+            return groupRepository.save(group);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override

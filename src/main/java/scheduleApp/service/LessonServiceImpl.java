@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import scheduleApp.entity.Group;
 import scheduleApp.entity.Instructor;
 import scheduleApp.entity.Lesson;
+import scheduleApp.entity.enums.DayOfWeek;
+import scheduleApp.entity.enums.LessonNumber;
 import scheduleApp.repository.LessonRepository;
 
 import java.util.List;
@@ -38,4 +40,5 @@ public class LessonServiceImpl implements LessonService {
     public List<Lesson> findByInstructors(List<Instructor> instructors) {
         return lessonRepository.findByInstructors(instructors);
     }
+
 }

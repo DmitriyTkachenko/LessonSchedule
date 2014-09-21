@@ -19,6 +19,12 @@ public class AuditoriumServiceImpl implements AuditoriumService {
 
     @Override
     public Auditorium save(Auditorium auditorium) {
-        return auditoriumRepository.save(auditorium);
+        try {
+            return auditoriumRepository.save(auditorium);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

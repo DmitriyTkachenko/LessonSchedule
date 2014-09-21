@@ -19,6 +19,12 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public Course save(Course course) {
-        return courseRepository.save(course);
+        try {
+            return courseRepository.save(course);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

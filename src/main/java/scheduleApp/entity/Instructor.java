@@ -10,6 +10,7 @@ public class Instructor {
     private Integer id;
 
     @Basic
+    @Column(unique = true)
     private String name;
 
     @Basic
