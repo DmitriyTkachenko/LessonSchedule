@@ -33,4 +33,9 @@ public class GroupServiceImpl implements GroupService {
     public Group save(Group group) {
         return groupRepository.save(group);
     }
+
+    @Override
+    public Group findGroupByName(String name) {
+        return groupRepository.findGroupByName(name);
+    }
 }

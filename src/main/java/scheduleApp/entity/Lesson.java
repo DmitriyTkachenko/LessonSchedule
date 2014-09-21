@@ -41,7 +41,7 @@ public class Lesson {
             sb.append(i.toString()).append(", ");
         }
         if (sb.length() > 1) {
-            sb.delete(sb.length() - 2, sb.length() - 1);
+            sb.delete(sb.length() - 2, sb.length());
         }
         return sb.toString();
     }
@@ -52,7 +52,18 @@ public class Lesson {
             sb.append(a.toString()).append(", ");
         }
         if (sb.length() > 1) {
-            sb.delete(sb.length() - 2, sb.length() - 1);
+            sb.delete(sb.length() - 2, sb.length());
+        }
+        return sb.toString();
+    }
+
+    public String getGroupsString() {
+        StringBuilder sb = new StringBuilder();
+        for (Group g : groups) {
+            sb.append(g.toString()).append(", ");
+        }
+        if (sb.length() > 1) {
+            sb.delete(sb.length() - 2, sb.length());
         }
         return sb.toString();
     }

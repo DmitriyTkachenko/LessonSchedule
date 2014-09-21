@@ -20,15 +20,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        // с помощью нашего сервиса UserService получаем User
         User user = userService.getUser(email);
-        // указываем роли для этого пользователя
         Set<GrantedAuthority> roles = new HashSet<>();
         roles.add(new SimpleGrantedAuthority(user.getUserRole().name()));
 
-        // на основании полученныйх даных формируем объект UserDetails
-        // который позволит проверить введеный пользователем логин и пароль
-        // и уже потом аутентифицировать пользователя
+        // UserDetails object allows to check login and password entered by user and then authenticate this user
         UserDetails userDetails =
                 new org.springframework.security.core.userdetails.User(user.getLogin(),
                         user.getPassword(),

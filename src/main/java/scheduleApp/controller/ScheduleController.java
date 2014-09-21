@@ -1,5 +1,8 @@
 package scheduleApp.controller;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -14,11 +17,11 @@ import scheduleApp.repository.*;
 import scheduleApp.service.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.util.*;
 
 @Controller
 @EnableJpaRepositories
@@ -153,20 +156,56 @@ public class ScheduleController {
         return "redirect:" + referer;
     }
 
-    //    @RequestMapping(value = "/api/users", method = RequestMethod.GET)
-//    public
-//    @ResponseBody
-//    String listUsersJson(ModelMap model) throws JSONException {
-//        JSONArray userArray = new JSONArray();
-//        for (Lesson user : lessonRepository.findAll()) {
-//            JSONObject userJSON = new JSONObject();
-//            userJSON.put("id", user.getId());
-//            userJSON.put("firstName", user.getFirstName());
-//            userJSON.put("lastName", user.getLastName());
-//            userJSON.put("email", user.getEmail());
-//            userArray.put(userJSON);
-//        }
-//        return userArray.toString();
-//    }
+    @RequestMapping(value = "/api/group/", method = RequestMethod.POST, produces = "text/plain;charset=UTF-8")
+    @ResponseBody
+    String listLessonsForGroupJson(@RequestParam("groupName") String groupName, ModelMap model) throws JSONException {
+        Group group = groupService.findGroupByName(groupName);
+        JSONArray lessonArray = new JSONArray();
+        for (Lesson lesson : group.getLessons()) {
+            JSONObject lessonJSON = new JSONObject();
+            lessonJSON.put("course", lesson.getCourse().getName());
+            lessonJSON.put("instructors", lesson.getInstructorsString());
+            lessonJSON.put("auditoriums", lesson.getAuditoriumsString());
+            lessonJSON.put("type", lesson.getLessonType().getDisplayName());
+            lessonJSON.put("number", lesson.getLessonNumber().getDisplayName());
+            lessonJSON.put("dayOfWeek", lesson.getDayOfWeek().getDisplayName());
+            lessonArray.put(lessonJSON);
+        }
+        return lessonArray.toString();
+    }
 
+    @RequestMapping(value = "/api/instructor/", method = RequestMethod.POST, produces = "text/plain;charset=UTF-8")
+    @ResponseBody
+    String listLessonsForInstructorJson(@RequestParam("instructorName") String instructorName, ModelMap model) throws JSONException {
+        Instructor instructor = instructorService.findInstructorByName(instructorName);
+        JSONArray lessonArray = new JSONArray();
+        for (Lesson lesson : instructor.getLessons()) {
+            JSONObject lessonJSON = new JSONObject();
+            lessonJSON.put("course", lesson.getCourse().getName());
+            lessonJSON.put("groups", lesson.getGroupsString());
+            lessonJSON.put("instructors", lesson.getInstructorsString());
+            lessonJSON.put("auditoriums", lesson.getAuditoriumsString());
+            lessonJSON.put("type", lesson.getLessonType().getDisplayName());
+            lessonJSON.put("number", lesson.getLessonNumber().getDisplayName());
+            lessonJSON.put("dayOfWeek", lesson.getDayOfWeek().getDisplayName());
+            lessonArray.put(lessonJSON);
+        }
+        return lessonArray.toString();
+    }
+
+/*    @RequestMapping(value = "/api/users", method = RequestMethod.GET)
+    public
+    @ResponseBody
+    String listUsersJson(ModelMap model) throws JSONException {
+        JSONArray userArray = new JSONArray();
+        for (User user : userRepository.findAll()) {
+            JSONObject userJSON = new JSONObject();
+            userJSON.put("id", user.getId());
+            userJSON.put("firstName", user.getFirstName());
+            userJSON.put("lastName", user.getLastName());
+            userJSON.put("email", user.getEmail());
+            userArray.put(userJSON);
+        }
+        return userArray.toString();
+    }*/
 }

@@ -15,7 +15,7 @@ public class Instructor {
     @Basic
     private String title;
 
-    @ManyToMany(mappedBy = "instructors")
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "instructors")
     private List<Lesson> lessons;
 
     public Integer getId() {
@@ -40,6 +40,14 @@ public class Instructor {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public List<Lesson> getLessons() {
+        return lessons;
+    }
+
+    public void setLessons(List<Lesson> lessons) {
+        this.lessons = lessons;
     }
 
     @Override

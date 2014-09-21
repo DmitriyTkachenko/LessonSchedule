@@ -17,7 +17,7 @@ public class Group {
     @Basic
     private Integer numberOfStudents;
 
-    @ManyToMany(mappedBy = "groups")
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "groups")
     private List<Lesson> lessons;
 
     public Integer getId() {

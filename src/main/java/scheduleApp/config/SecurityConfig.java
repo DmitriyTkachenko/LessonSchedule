@@ -19,8 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
 
-    // регистрируем нашу реализацию UserDetailsService
-    // а также PasswordEncoder для приведения пароля в формат SHA1
+    // register UserDetailsService implementation and PasswordEncoder for SHA-1
     @Autowired
     public void registerGlobalAuthentication(AuthenticationManagerBuilder auth) throws Exception {
         auth
@@ -30,42 +29,32 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        // включаем защиту от CSRF атак
+        // protection from CSRF attacks
         http.csrf()
                 .disable()
-                        // указываем правила запросов
-                        // по которым будет определятся доступ к ресурсам и остальным данным
+                // rules for requests that define access for resources
                 .authorizeRequests()
                 .antMatchers("/resources/**", "/**").permitAll()
                 .anyRequest().permitAll()
                 .and();
 
         http.formLogin()
-                // указываем страницу с формой логина
                 .loginPage("/login")
-                        // указываем action с формы логина
                 .loginProcessingUrl("/j_spring_security_check")
-                        // указываем URL при неудачном логине
                 .failureUrl("/login?error")
-                        // Указываем параметры логина и пароля с формы логина
                 .usernameParameter("j_username")
                 .passwordParameter("j_password")
-                        // даем доступ к форме логина всем
+                // allow everyone to have access to login form
                 .permitAll();
 
         http.logout()
-                // разрешаем делать логаут всем
                 .permitAll()
-                        // указываем URL логаута
                 .logoutUrl("/logout")
-                        // указываем URL при удачном логауте
                 .logoutSuccessUrl("/")
-                        // делаем не валидной текущую сессию
                 .invalidateHttpSession(true);
 
     }
 
-    // Указываем Spring контейнеру, что надо инициализировать ShaPasswordEncoder
     @Bean
     public ShaPasswordEncoder getShaPasswordEncoder(){
         return new ShaPasswordEncoder();

@@ -137,6 +137,9 @@
                                                 <tr><td>${lessons[count].course.name}</td></tr>
                                                 <tr><td>${lessons[count].instructorsString}</td></tr>
                                                 <tr><td>${lessons[count].auditoriumsString} ${lessons[count].lessonType.displayName}</td></tr>
+                                                <c:if test="${mode == 'instructor'}">
+                                                    <tr><td>${lessons[count].groupsString}</td></tr>
+                                                </c:if>
                                                 <sec:authorize access="hasRole('EDITOR') or hasRole('ADMIN')">
                                                     <tr><td>
                                                         <form action="delete/${lessons[count].id}/" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Видалити"/></form>
@@ -156,6 +159,8 @@
                     </tbody>
                 </table>
             </c:if>
+
+            <p><a class="btn btn-lg btn-default" href="<c:url value="/" />" role="button">Повернутися до пошуку</a></p>
 
         </div>
 

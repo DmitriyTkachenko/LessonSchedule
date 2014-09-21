@@ -7,52 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd83edf2-ef86-428b-80ec-f2a231287ef3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/AuditoriumService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/AuditoriumServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/CourseService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/CourseServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/LessonService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/LessonServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/Group.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/Group.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/repository/GroupRepository.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/repository/GroupRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/service/GroupService.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/GroupService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/service/GroupServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/GroupServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/Instructor.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/Instructor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/repository/InstructorRepository.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/repository/InstructorRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/service/InstructorService.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/InstructorService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/service/InstructorServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/InstructorServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/Lesson.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/Lesson.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/controller/ScheduleController.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/controller/ScheduleController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/config/SecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/config/SecurityConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/service/UserDetailsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/UserDetailsServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/schedule.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/schedule.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\Auditorium.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/Auditorium.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\AuditoriumFormatter.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/formatter/AuditoriumFormatter.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\AuditoriumRepository.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/repository/AuditoriumRepository.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\CharacterEncodingFilter.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/filter/CharacterEncodingFilter.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\Course.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/Course.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\CourseFormatter.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/formatter/CourseFormatter.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\CourseRepository.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/repository/CourseRepository.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\DayOfWeek.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/enums/DayOfWeek.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\Group.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/Group.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\GroupFormatter.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/formatter/GroupFormatter.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\GroupRepository.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/repository/GroupRepository.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\GroupSearchForm.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/form/GroupSearchForm.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\GroupService.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/GroupService.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\GroupServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/GroupServiceImpl.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\Instructor.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/Instructor.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\InstructorFormatter.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/formatter/InstructorFormatter.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\InstructorRepository.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/repository/InstructorRepository.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\InstructorSearchForm.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/form/InstructorSearchForm.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\InstructorService.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/InstructorService.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\InstructorServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/InstructorServiceImpl.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\Lesson.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/Lesson.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\LessonRepository.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/repository/LessonRepository.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\LessonType.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/enums/LessonType.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/controller/LoginController.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\Number.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/enums/LessonNumber.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\ScheduleController.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/controller/ScheduleController.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\SearchController.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/controller/SearchController.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\SecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/config/SecurityConfig.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\User.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/User.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\UserDetailsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/UserDetailsServiceImpl.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/repository/UserRepository.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\UserRole.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/entity/enums/UserRole.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\UserService.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/UserService.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/service/UserServiceImpl.java" />
-      <change type="MOVED" beforePath="D:\Dropbox\IdeaProjects\LessonSchedule\src\main\java\scheduleApp\WebAppConfig.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/config/WebAppConfig.java" />
     </list>
     <ignored path="LessonSchedule.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,28 +45,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LessonService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/LessonService.java">
+      <file leaf-file-name="schedule.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/schedule.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LessonServiceImpl.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/LessonServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6275168" vertical-offset="34" max-vertical-offset="697">
-              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#704#705#0" expanded="true" />
-                <element signature="e#747#748#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-11.115385" vertical-offset="2091" max-vertical-offset="3230">
+              <caret line="140" column="89" selection-start-line="140" selection-start-column="89" selection-end-line="140" selection-end-column="89" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,8 +58,18 @@
       <file leaf-file-name="ScheduleController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/controller/ScheduleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2069" max-vertical-offset="2652">
-              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2431" max-vertical-offset="3264">
+              <caret line="181" column="49" selection-start-line="181" selection-start-column="49" selection-end-line="181" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecurityConfig.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/config/SecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.89022297" vertical-offset="280" max-vertical-offset="986">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -137,7 +99,6 @@
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/WebAppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/ScheduleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/UserDetailsServiceImpl.java" />
@@ -147,21 +108,31 @@
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/GroupServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/Number.java" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/LessonNumber.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/schedule.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/form/InstructorSearchForm.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/GroupService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/GroupServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/InstructorService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/InstructorServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/CourseService.java" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/AuditoriumService.java" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/AuditoriumServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/CourseServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/LessonService.java" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/LessonServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/GroupService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/repository/GroupRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/GroupServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/entity/Group.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/filter/CharacterEncodingFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/entity/Lesson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/InstructorService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/repository/LessonRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/repository/InstructorRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/service/InstructorServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scheduleApp/entity/Instructor.java" />
         <option value="$PROJECT_DIR$/src/main/java/scheduleApp/controller/ScheduleController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/schedule.jsp" />
       </list>
     </option>
   </component>
@@ -224,7 +195,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -239,6 +210,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -567,6 +540,40 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="enums" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LessonSchedule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LessonSchedule" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scheduleApp" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -603,8 +610,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -620,7 +625,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -934,6 +939,12 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -952,12 +963,6 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="false" name="Tomcat 7 Local Server" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.55" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
@@ -1086,7 +1091,8 @@
       <workItem from="1411295328714" duration="5689000" />
       <workItem from="1411310051798" duration="1115000" />
       <workItem from="1411311172150" duration="20000" />
-      <workItem from="1411311193079" duration="5332000" />
+      <workItem from="1411311193079" duration="7323000" />
+      <workItem from="1411330056277" duration="4826000" />
     </task>
     <task id="LOCAL-00001" summary="Deleted unneeded third-party code. JSP imports changed. persistence.xml adjusted.">
       <created>1410251965800</created>
@@ -1184,11 +1190,15 @@
       <created>1411318855035</created>
       <updated>1411318855035</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Major refactoring: everything is nicely placed in the appropriate package. Service layer architecture fully implemented.">
+      <created>1411328112073</created>
+      <updated>1411328112073</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87028000" />
+    <option name="totallyTimeSpent" value="93845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1205,7 +1215,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.341412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3412527" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32575756" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1219,7 +1229,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32829374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26677316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32721382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1228,16 +1238,16 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721382" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20394036" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32575756" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32575756" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32327586" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1257,8 +1267,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30237582" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721382" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1297,11 +1307,12 @@
     <MESSAGE value="Fixed fetching users from the database." />
     <MESSAGE value="Minor fixes." />
     <MESSAGE value="Fixed service layer architecture." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed service layer architecture." />
+    <MESSAGE value="Major refactoring: everything is nicely placed in the appropriate package. Service layer architecture fully implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Major refactoring: everything is nicely placed in the appropriate package. Service layer architecture fully implemented." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="76" />
+      <option name="time" value="81" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1309,13 +1320,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/controller/ScheduleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2108">
-          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/schedule.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="838" max-vertical-offset="3791">
@@ -1397,24 +1401,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/entity/Instructor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/entity/Course.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/entity/Lesson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1547">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1432,63 +1422,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/config/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1309">
-          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/config/WebAppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/entity/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/controller/SearchController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LessonSchedule.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1972">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
-          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1500,45 +1437,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/entity/enums/LessonNumber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
           <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding>
-            <marker date="1411319975721" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.73077" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="595">
-          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/schedule.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9245284" vertical-offset="0" max-vertical-offset="3145">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1546,14 +1448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/filter/CharacterEncodingFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1566,83 +1460,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="782">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/InstructorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/repository/CourseRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/AuditoriumService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/GroupServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="680">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/InstructorServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/UserDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="595">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="e#453#454#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/GroupService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22818792" vertical-offset="0" max-vertical-offset="596">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1650,13 +1471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#633#634#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1664,13 +1478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1682,29 +1489,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/repository/GroupRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/AuditoriumService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/repository/InstructorRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/config/WebAppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/repository/LessonRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/controller/SearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/entity/Auditorium.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/LessonServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="731">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/UserDetailsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="595">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1718,23 +1579,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/controller/ScheduleController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/GroupServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2069" max-vertical-offset="2652">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="697">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#967#968#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.653846" vertical-offset="121" max-vertical-offset="1020">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/LessonServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6275168" vertical-offset="34" max-vertical-offset="697">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        <state vertical-scroll-proportion="-1.72" vertical-offset="212" max-vertical-offset="782">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="155" max-vertical-offset="918">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/filter/CharacterEncodingFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/entity/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/GroupService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/InstructorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/repository/LessonRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/repository/GroupRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/repository/InstructorRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/service/InstructorServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="697">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/entity/Instructor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="748">
+          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/entity/Lesson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.787307" vertical-offset="561" max-vertical-offset="1734">
+          <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/schedule.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385" vertical-offset="2091" max-vertical-offset="3230">
+          <caret line="140" column="89" selection-start-line="140" selection-start-column="89" selection-end-line="140" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/controller/ScheduleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2431" max-vertical-offset="3264">
+          <caret line="181" column="49" selection-start-line="181" selection-start-column="49" selection-end-line="181" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scheduleApp/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.89022297" vertical-offset="280" max-vertical-offset="986">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

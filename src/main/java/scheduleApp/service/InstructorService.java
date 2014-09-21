@@ -9,4 +9,5 @@ public interface InstructorService {
     List<Instructor> findAll();
     String getInstructorName(Integer id);
     Instructor save(Instructor instructor);
+    Instructor findInstructorByName(String name);
 }

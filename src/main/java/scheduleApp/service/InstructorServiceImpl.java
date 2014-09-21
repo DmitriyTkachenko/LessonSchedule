@@ -33,4 +33,9 @@ public class InstructorServiceImpl implements InstructorService {
     public Instructor save(Instructor instructor) {
         return instructorRepository.save(instructor);
     }
+
+    @Override
+    public Instructor findInstructorByName(String name) {
+        return instructorRepository.findInstructorByName(name);
+    }
 }

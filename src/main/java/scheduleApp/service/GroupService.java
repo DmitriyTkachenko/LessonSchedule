@@ -9,4 +9,5 @@ public interface GroupService {
     List<Group> findAll();
     String getGroupName(Integer id);
     Group save(Group group);
+    Group findGroupByName(String name);
 }
