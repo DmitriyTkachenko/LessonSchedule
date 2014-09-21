@@ -7,21 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd83edf2-ef86-428b-80ec-f2a231287ef3" name="Default" comment="Fixed fetching users from the database.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_acl_3_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_3_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_3_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_taglibs_3_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_3_2_5_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LessonSchedule.iml" afterPath="$PROJECT_DIR$/LessonSchedule.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/ScheduleController.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/ScheduleController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scheduleApp/UserDetailsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/scheduleApp/UserDetailsServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LessonSchedule.iws" />
@@ -838,7 +825,7 @@
       <workItem from="1411295328714" duration="5689000" />
       <workItem from="1411310051798" duration="1115000" />
       <workItem from="1411311172150" duration="20000" />
-      <workItem from="1411311193079" duration="889000" />
+      <workItem from="1411311193079" duration="929000" />
     </task>
     <task id="LOCAL-00001" summary="Deleted unneeded third-party code. JSP imports changed. persistence.xml adjusted.">
       <created>1410251965800</created>
@@ -924,11 +911,15 @@
       <created>1411297014105</created>
       <updated>1411297014105</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Minor fixes.">
+      <created>1411318496795</created>
+      <updated>1411318496795</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82585000" />
+    <option name="totallyTimeSpent" value="82625000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1035,7 +1026,8 @@
     <MESSAGE value="Implemented authorization (without storing User in database yet)." />
     <MESSAGE value="Implemented fetching users from the database." />
     <MESSAGE value="Fixed fetching users from the database." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed fetching users from the database." />
+    <MESSAGE value="Minor fixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

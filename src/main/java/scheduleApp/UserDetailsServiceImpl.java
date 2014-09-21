@@ -22,7 +22,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         // с помощью нашего сервиса UserService получаем User
         User user = userService.getUser(email);
         // указываем роли для этого пользователя
-        Set<GrantedAuthority> roles = new HashSet();
+        Set<GrantedAuthority> roles = new HashSet<>();
         roles.add(new SimpleGrantedAuthority(user.getUserRole().name()));
 
         // на основании полученныйх даных формируем объект UserDetails

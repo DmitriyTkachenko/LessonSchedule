@@ -42,13 +42,16 @@ public class ScheduleController {
     @Autowired
     private InstructorService instructorService;
 
-    private Comparator<Lesson> lessonComparator = (l1, l2) -> {
-        int numberCmp = l1.getNumber().getValue() - l2.getNumber().getValue();
-        if (numberCmp != 0) {
-            return numberCmp;
+    private Comparator<Lesson> lessonComparator = new Comparator<Lesson>() {
+        @Override
+        public int compare(Lesson l1, Lesson l2) {
+            int numberCmp = l1.getNumber().getValue() - l2.getNumber().getValue();
+            if (numberCmp != 0) {
+                return numberCmp;
+            }
+            int dayOfWeekCmp = l1.getDayOfWeek().getValue() - l2.getDayOfWeek().getValue();
+            return dayOfWeekCmp;
         }
-        int dayOfWeekCmp = l1.getDayOfWeek().getValue() - l2.getDayOfWeek().getValue();
-        return dayOfWeekCmp;
     };
 
     private List<Lesson> lessonList = new ArrayList<>();
