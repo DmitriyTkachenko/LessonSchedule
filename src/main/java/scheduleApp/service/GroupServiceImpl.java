@@ -13,13 +13,6 @@ public class GroupServiceImpl implements GroupService {
     @Autowired
     private GroupRepository groupRepository;
 
-    public List<Group> getGroupAsList(Integer id) {
-        List<Group> list = new ArrayList<>();
-        Group group = groupRepository.findOne(id);
-        list.add(group);
-        return list;
-    }
-
     @Override
     public List<Group> findAll() {
         return groupRepository.findAll();
@@ -43,5 +36,10 @@ public class GroupServiceImpl implements GroupService {
     @Override
     public Group findGroupByName(String name) {
         return groupRepository.findGroupByName(name);
+    }
+
+    @Override
+    public Group findGroupById(Integer id) {
+        return groupRepository.findGroupById(id);
     }
 }

@@ -69,7 +69,7 @@ public class ScheduleController {
         if (request.isUserInRole("EDITOR") || request.isUserInRole("ADMIN")) {
             prepareForEditing(model);
         }
-        lessonList = lessonService.findByGroups(groupService.getGroupAsList(groupId));
+        lessonList = groupService.findGroupById(groupId).getLessons();
         Collections.sort(lessonList, lessonComparator);
         model.addAttribute("lessons", lessonList);
         model.addAttribute("mode", "group");
@@ -84,7 +84,7 @@ public class ScheduleController {
         if (request.isUserInRole("EDITOR") || request.isUserInRole("ADMIN")) {
             prepareForEditing(model);
         }
-        lessonList = lessonService.findByInstructors(instructorService.getInstructorAsList(instructorId));
+        lessonList = instructorService.findInstructorById(instructorId).getLessons();
         Collections.sort(lessonList, lessonComparator);
         model.addAttribute("lessons", lessonList);
         model.addAttribute("mode", "instructor");
@@ -193,19 +193,4 @@ public class ScheduleController {
         return lessonArray.toString();
     }
 
-/*    @RequestMapping(value = "/api/users", method = RequestMethod.GET)
-    public
-    @ResponseBody
-    String listUsersJson(ModelMap model) throws JSONException {
-        JSONArray userArray = new JSONArray();
-        for (User user : userRepository.findAll()) {
-            JSONObject userJSON = new JSONObject();
-            userJSON.put("id", user.getId());
-            userJSON.put("firstName", user.getFirstName());
-            userJSON.put("lastName", user.getLastName());
-            userJSON.put("email", user.getEmail());
-            userArray.put(userJSON);
-        }
-        return userArray.toString();
-    }*/
 }

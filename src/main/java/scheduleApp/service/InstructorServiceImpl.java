@@ -13,13 +13,6 @@ public class InstructorServiceImpl implements InstructorService {
     @Autowired
     private InstructorRepository instructorRepository;
 
-    public List<Instructor> getInstructorAsList(Integer id) {
-        List<Instructor> list = new ArrayList<>();
-        Instructor instructor = instructorRepository.findOne(id);
-        list.add(instructor);
-        return list;
-    }
-
     @Override
     public List<Instructor> findAll() {
         return instructorRepository.findAll();
@@ -43,5 +36,10 @@ public class InstructorServiceImpl implements InstructorService {
     @Override
     public Instructor findInstructorByName(String name) {
         return instructorRepository.findInstructorByName(name);
+    }
+
+    @Override
+    public Instructor findInstructorById(Integer id) {
+        return instructorRepository.findInstructorById(id);
     }
 }

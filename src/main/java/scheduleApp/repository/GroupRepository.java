@@ -5,4 +5,5 @@ import scheduleApp.entity.Group;
 
 public interface GroupRepository extends JpaRepository<Group, Integer> {
     Group findGroupByName(String name);
+    Group findGroupById(Integer id);
 }
