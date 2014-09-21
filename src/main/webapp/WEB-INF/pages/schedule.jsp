@@ -4,7 +4,7 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <html>
     <head>
@@ -94,8 +94,8 @@
                     <form:options items="${dayOfWeek}" itemLabel="displayName"/>
                 </form:select>
 
-                <form:select path="number" class="selectpicker" data-live-search="true">
-                    <form:options items="${number}" itemLabel="displayName"/>
+                <form:select path="lessonNumber" class="selectpicker" data-live-search="true">
+                    <form:options items="${lessonNumber}" itemLabel="displayName"/>
                 </form:select>
 
                 <form:select path="lessonType" class="selectpicker" data-live-search="true">
@@ -129,10 +129,10 @@
                             <c:forEach var="j" begin="1" end="6">
                                 <c:if test="${j == 1}">
                                     <tr>
-                                    <th>${numbers[i - 1].displayName}</th>
+                                    <th>${lessonNumbers[i - 1].displayName}</th>
                                 </c:if>
                                     <td>
-                                        <c:if test="${lessons[count].number.value == i && lessons[count].dayOfWeek.value == j}">
+                                        <c:if test="${lessons[count].lessonNumber.value == i && lessons[count].dayOfWeek.value == j}">
                                             <table>
                                                 <tr><td>${lessons[count].course.name}</td></tr>
                                                 <tr><td>${lessons[count].instructorsString}</td></tr>
