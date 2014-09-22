@@ -13,6 +13,4 @@ public interface LessonService {
     List<Lesson> findAll();
     Lesson save(Lesson lesson);
     void delete(Integer id);
-    List<Lesson> findByGroups(List<Group> groups);
-    List<Lesson> findByInstructors(List<Instructor> instructors);
 }

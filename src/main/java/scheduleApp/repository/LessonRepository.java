@@ -11,6 +11,4 @@ import scheduleApp.entity.enums.LessonType;
 import java.util.List;
 
 public interface LessonRepository extends JpaRepository<Lesson, Integer> {
-    List<Lesson> findByGroups(List<Group> groups);
-    List<Lesson> findByInstructors(List<Instructor> instructors);
 }
