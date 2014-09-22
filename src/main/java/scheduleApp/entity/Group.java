@@ -12,7 +12,7 @@ public class Group {
 
     @Basic
 
-    @Column(name = "name", unique = true)
+    @Column(name = "name", unique = true, nullable = false)
     private String name;
 
     @Basic
@@ -55,6 +55,10 @@ public class Group {
 
     @Override
     public String toString() {
-        return name + " (" + numberOfStudents + ")";
+        String s = name;
+        if (numberOfStudents != null) {
+            s += " (" + numberOfStudents + ")";
+        }
+        return s;
     }
 }

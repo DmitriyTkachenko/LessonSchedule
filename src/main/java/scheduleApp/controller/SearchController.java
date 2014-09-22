@@ -17,7 +17,6 @@ import javax.validation.Valid;
 
 @Controller
 @EnableJpaRepositories
-
 public class SearchController {
 
     @Autowired

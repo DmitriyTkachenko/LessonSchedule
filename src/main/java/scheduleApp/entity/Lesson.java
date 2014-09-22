@@ -26,10 +26,10 @@ public class Lesson {
     @ManyToOne(fetch = FetchType.EAGER)
     private @Valid Course course;
 
-    @Column(columnDefinition = "tinyint")
+    @Column(columnDefinition = "tinyint", nullable = false)
     private DayOfWeek dayOfWeek;
 
-    @Column(columnDefinition = "tinyint")
+    @Column(columnDefinition = "tinyint", nullable = false)
     private LessonNumber lessonNumber;
 
     @Column(columnDefinition = "tinyint")

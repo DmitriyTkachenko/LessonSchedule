@@ -10,7 +10,7 @@ public class Instructor {
     private Integer id;
 
     @Basic
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private String name;
 
     @Basic
@@ -53,6 +53,10 @@ public class Instructor {
 
     @Override
     public String toString() {
-        return title + " " + name;
+        if (title != null) {
+            return title + " " + name;
+        } else {
+            return name;
+        }
     }
 }

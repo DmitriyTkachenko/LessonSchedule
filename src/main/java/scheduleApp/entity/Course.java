@@ -9,7 +9,7 @@ public class Course {
     private Integer id;
 
     @Basic
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private String name;
 
     public Integer getId() {

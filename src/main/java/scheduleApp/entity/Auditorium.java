@@ -10,9 +10,11 @@ public class Auditorium {
     private Integer id;
 
     @Basic
+    @Column(nullable = false)
     private String building;
 
     @Basic
+    @Column(nullable = false)
     private String room;
 
     public Integer getId() {
