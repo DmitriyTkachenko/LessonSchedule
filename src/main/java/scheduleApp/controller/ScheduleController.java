@@ -158,7 +158,7 @@ public class ScheduleController {
 
     @RequestMapping(value = "/api/group/", method = RequestMethod.POST, produces = "text/plain;charset=UTF-8")
     @ResponseBody
-    String listLessonsForGroupJson(@RequestParam("groupName") String groupName, ModelMap model) throws JSONException {
+    public String listLessonsForGroupJson(@RequestParam("groupName") String groupName, ModelMap model) throws JSONException {
         Group group = groupService.findGroupByName(groupName);
         JSONArray lessonArray = new JSONArray();
         for (Lesson lesson : group.getLessons()) {
@@ -176,7 +176,7 @@ public class ScheduleController {
 
     @RequestMapping(value = "/api/instructor/", method = RequestMethod.POST, produces = "text/plain;charset=UTF-8")
     @ResponseBody
-    String listLessonsForInstructorJson(@RequestParam("instructorName") String instructorName, ModelMap model) throws JSONException {
+    public String listLessonsForInstructorJson(@RequestParam("instructorName") String instructorName, ModelMap model) throws JSONException {
         Instructor instructor = instructorService.findInstructorByName(instructorName);
         JSONArray lessonArray = new JSONArray();
         for (Lesson lesson : instructor.getLessons()) {

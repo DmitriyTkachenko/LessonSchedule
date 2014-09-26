@@ -8,10 +8,10 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import scheduleApp.repository.GroupRepository;
 import scheduleApp.form.GroupSearchForm;
-import scheduleApp.repository.InstructorRepository;
 import scheduleApp.form.InstructorSearchForm;
+import scheduleApp.service.GroupService;
+import scheduleApp.service.InstructorService;
 
 import javax.validation.Valid;
 
@@ -20,15 +20,15 @@ import javax.validation.Valid;
 public class SearchController {
 
     @Autowired
-    private GroupRepository groupRepository;
+    private GroupService groupService;
 
     @Autowired
-    private InstructorRepository instructorRepository;
+    private InstructorService instructorService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String showIndex(ModelMap model) {
-        model.addAttribute("groups", groupRepository.findAll());
-        model.addAttribute("instructors", instructorRepository.findAll());
+    public String showIndexPage(ModelMap model) {
+        model.addAttribute("groups", groupService.findAll());
+        model.addAttribute("instructors", instructorService.findAll());
         model.addAttribute("groupSearchForm", new GroupSearchForm());
         model.addAttribute("instructorSearchForm", new InstructorSearchForm());
         return "index";
