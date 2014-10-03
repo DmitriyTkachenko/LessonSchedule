@@ -1,5 +1,6 @@
 package scheduleApp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import scheduleApp.entity.enums.LessonNumber;
 import scheduleApp.entity.enums.DayOfWeek;
 import scheduleApp.entity.enums.LessonType;
@@ -35,6 +36,7 @@ public class Lesson {
     @Column(columnDefinition = "tinyint")
     private LessonType lessonType;
 
+    @JsonIgnore
     public String getInstructorsString() {
         StringBuilder sb = new StringBuilder();
         for (Instructor i : instructors) {
@@ -46,6 +48,7 @@ public class Lesson {
         return sb.toString();
     }
 
+    @JsonIgnore
     public String getAuditoriumsString() {
         StringBuilder sb = new StringBuilder();
         for (Auditorium a : auditoriums) {
@@ -57,6 +60,7 @@ public class Lesson {
         return sb.toString();
     }
 
+    @JsonIgnore
     public String getGroupsString() {
         StringBuilder sb = new StringBuilder();
         for (Group g : groups) {

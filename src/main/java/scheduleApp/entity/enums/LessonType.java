@@ -1,5 +1,7 @@
 package scheduleApp.entity.enums;
 
+import com.fasterxml.jackson.annotation.JsonValue;
+
 public enum LessonType {
     LECTURE("Лекція"),
     PRACTICE("Практика"),
@@ -12,6 +14,7 @@ public enum LessonType {
         displayName = s;
     }
 
+    @JsonValue
     public String getDisplayName() {
         return displayName;
     }

@@ -1,8 +1,5 @@
 package scheduleApp.controller;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -13,14 +10,10 @@ import org.springframework.web.bind.annotation.*;
 import scheduleApp.entity.enums.LessonNumber;
 import scheduleApp.entity.*;
 import scheduleApp.entity.enums.DayOfWeek;
-import scheduleApp.repository.*;
 import scheduleApp.service.*;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.util.*;
 
 @Controller
@@ -56,12 +49,14 @@ public class ScheduleController {
 
     private List<Lesson> lessonList = new ArrayList<>();
 
+    @SuppressWarnings("SameReturnValue")
     @RequestMapping(value = "/schedule", method = RequestMethod.GET)
     public String showSchedule(@RequestParam(value = "groupId", required = false) Integer groupId, @RequestParam(value = "instructorId", required = false) Integer instructorId, ModelMap model) {
         prepareForEditing(model);
         return "schedule";
     }
 
+    @SuppressWarnings("SameReturnValue")
     @RequestMapping(value = "/schedule/group/{groupId}/", method = RequestMethod.GET)
     public String showScheduleForGroup(@PathVariable("groupId") Integer groupId, ModelMap model, HttpServletRequest request) {
         model.addAttribute("daysOfWeek", DayOfWeek.values());
@@ -77,6 +72,7 @@ public class ScheduleController {
         return "schedule";
     }
 
+    @SuppressWarnings("SameReturnValue")
     @RequestMapping(value = "/schedule/instructor/{instructorId}/", method = RequestMethod.GET)
     public String showScheduleForInstructor(@PathVariable("instructorId") Integer instructorId, ModelMap model, HttpServletRequest request) {
         model.addAttribute("daysOfWeek", DayOfWeek.values());
@@ -155,42 +151,4 @@ public class ScheduleController {
         String referer = request.getHeader("Referer");
         return "redirect:" + referer;
     }
-
-    @RequestMapping(value = "/api/group/", method = RequestMethod.POST, produces = "text/plain;charset=UTF-8")
-    @ResponseBody
-    public String listLessonsForGroupJson(@RequestParam("groupName") String groupName, ModelMap model) throws JSONException {
-        Group group = groupService.findGroupByName(groupName);
-        JSONArray lessonArray = new JSONArray();
-        for (Lesson lesson : group.getLessons()) {
-            JSONObject lessonJSON = new JSONObject();
-            lessonJSON.put("course", lesson.getCourse().getName());
-            lessonJSON.put("instructors", lesson.getInstructorsString());
-            lessonJSON.put("auditoriums", lesson.getAuditoriumsString());
-            lessonJSON.put("type", lesson.getLessonType().getDisplayName());
-            lessonJSON.put("number", lesson.getLessonNumber().getDisplayName());
-            lessonJSON.put("dayOfWeek", lesson.getDayOfWeek().getDisplayName());
-            lessonArray.put(lessonJSON);
-        }
-        return lessonArray.toString();
-    }
-
-    @RequestMapping(value = "/api/instructor/", method = RequestMethod.POST, produces = "text/plain;charset=UTF-8")
-    @ResponseBody
-    public String listLessonsForInstructorJson(@RequestParam("instructorName") String instructorName, ModelMap model) throws JSONException {
-        Instructor instructor = instructorService.findInstructorByName(instructorName);
-        JSONArray lessonArray = new JSONArray();
-        for (Lesson lesson : instructor.getLessons()) {
-            JSONObject lessonJSON = new JSONObject();
-            lessonJSON.put("course", lesson.getCourse().getName());
-            lessonJSON.put("groups", lesson.getGroupsString());
-            lessonJSON.put("instructors", lesson.getInstructorsString());
-            lessonJSON.put("auditoriums", lesson.getAuditoriumsString());
-            lessonJSON.put("type", lesson.getLessonType().getDisplayName());
-            lessonJSON.put("number", lesson.getLessonNumber().getDisplayName());
-            lessonJSON.put("dayOfWeek", lesson.getDayOfWeek().getDisplayName());
-            lessonArray.put(lessonJSON);
-        }
-        return lessonArray.toString();
-    }
-
 }

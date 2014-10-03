@@ -1,5 +1,7 @@
 package scheduleApp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -16,6 +18,7 @@ public class Instructor {
     @Basic
     private String title;
 
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER, mappedBy = "instructors")
     private List<Lesson> lessons;
 

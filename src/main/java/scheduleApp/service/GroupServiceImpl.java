@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import scheduleApp.entity.Group;
 import scheduleApp.repository.GroupRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

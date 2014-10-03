@@ -1,5 +1,7 @@
 package scheduleApp.entity.enums;
 
+import com.fasterxml.jackson.annotation.JsonValue;
+
 public enum DayOfWeek {
     MONDAY(1, "Понеділок"),
     TUESDAY(2, "Вівторок"),
@@ -15,6 +17,7 @@ public enum DayOfWeek {
         value = v; displayName = s;
     }
 
+    @JsonValue
     public String getDisplayName() {
         return displayName;
     }

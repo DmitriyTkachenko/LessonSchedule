@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/login")
 public class LoginController {
 
+    @SuppressWarnings("SameReturnValue")
     @RequestMapping(method = RequestMethod.GET)
     public String showLoginPage(Model model){
         return "login";

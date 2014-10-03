@@ -25,6 +25,7 @@ public class SearchController {
     @Autowired
     private InstructorService instructorService;
 
+    @SuppressWarnings("SameReturnValue")
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String showIndexPage(ModelMap model) {
         model.addAttribute("groups", groupService.findAll());

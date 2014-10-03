@@ -1,5 +1,7 @@
 package scheduleApp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -11,13 +13,13 @@ public class Group {
     private Integer id;
 
     @Basic
-
     @Column(name = "name", unique = true, nullable = false)
     private String name;
 
     @Basic
     private Integer numberOfStudents;
 
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER, mappedBy = "groups")
     private List<Lesson> lessons;
 
