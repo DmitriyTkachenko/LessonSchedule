@@ -19,7 +19,7 @@ public class Instructor {
     private String title;
 
     @JsonIgnore
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "instructors")
+    @ManyToMany(mappedBy = "instructors")
     private List<Lesson> lessons;
 
     public Integer getId() {

@@ -20,7 +20,7 @@ public class Group {
     private Integer numberOfStudents;
 
     @JsonIgnore
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "groups")
+    @ManyToMany(mappedBy = "groups")
     private List<Lesson> lessons;
 
     public Integer getId() {

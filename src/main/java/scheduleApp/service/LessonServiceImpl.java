@@ -1,5 +1,6 @@
 package scheduleApp.service;
 
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import scheduleApp.entity.Lesson;
@@ -34,12 +35,16 @@ public class LessonServiceImpl implements LessonService {
 
     @Override
     public List<Lesson> findByGroupId(Integer groupId) {
-        return groupRepository.findGroupById(groupId).getLessons();
+        List<Lesson> lessons = groupRepository.findGroupById(groupId).getLessons();
+        Hibernate.initialize(lessons);
+        return lessons;
     }
 
     @Override
     public List<Lesson> findByInstructorId(Integer instructorId) {
-        return instructorRepository.findInstructorById(instructorId).getLessons();
+        List<Lesson> lessons = instructorRepository.findInstructorById(instructorId).getLessons();
+        Hibernate.initialize(lessons);
+        return lessons;
     }
 
     @Override
