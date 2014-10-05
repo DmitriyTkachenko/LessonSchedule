@@ -50,8 +50,8 @@ public class ScheduleController {
     private List<Lesson> lessonList = new ArrayList<>();
 
     @SuppressWarnings("SameReturnValue")
-    @RequestMapping(value = "/schedule", method = RequestMethod.GET)
-    public String showSchedule(@RequestParam(value = "groupId", required = false) Integer groupId, @RequestParam(value = "instructorId", required = false) Integer instructorId, ModelMap model) {
+    @RequestMapping(value = "/schedule/", method = RequestMethod.GET)
+    public String showSchedule(ModelMap model) {
         prepareForEditing(model);
         return "schedule";
     }
@@ -64,7 +64,7 @@ public class ScheduleController {
         if (request.isUserInRole("EDITOR") || request.isUserInRole("ADMIN")) {
             prepareForEditing(model);
         }
-        lessonList = groupService.findGroupById(groupId).getLessons();
+        lessonList = lessonService.findByGroupId(groupId);
         Collections.sort(lessonList, lessonComparator);
         model.addAttribute("lessons", lessonList);
         model.addAttribute("mode", "group");
@@ -80,7 +80,7 @@ public class ScheduleController {
         if (request.isUserInRole("EDITOR") || request.isUserInRole("ADMIN")) {
             prepareForEditing(model);
         }
-        lessonList = instructorService.findInstructorById(instructorId).getLessons();
+        lessonList = lessonService.findByInstructorId(instructorId);
         Collections.sort(lessonList, lessonComparator);
         model.addAttribute("lessons", lessonList);
         model.addAttribute("mode", "instructor");
